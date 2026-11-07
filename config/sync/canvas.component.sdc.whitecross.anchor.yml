@@ -1,0 +1,30 @@
+uuid: 641b7c82-f873-4744-b6cd-077013234d47
+langcode: en
+status: true
+dependencies:
+  theme:
+    - whitecross
+active_version: '5524813695409257'
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        id:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: anchor-id
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+    fallback_metadata:
+      slot_definitions: {  }
+label: Anchor
+id: sdc.whitecross.anchor
+provider: whitecross
+source: sdc
+source_local_id: 'whitecross:anchor'

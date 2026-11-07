@@ -1,0 +1,141 @@
+{% set label = null %}
+{% set attributes = null %}
+
+{% set dropdown_menu =
+  html_cva(
+    base: [
+      'navbar--dropdown-menu',
+      'flex flex-col items-stretch justify-start md:flex-row',
+      'max-h-full',
+      'gap-2',
+      'overflow-auto md:overflow-visible'
+    ],
+    variants: {
+      menuAlign: {
+        left: 'pl-8 md:justify-start',
+        center: 'md:justify-center',
+        right: 'md:justify-end'
+      }
+    }
+  )
+%}
+
+{% set dropdown_menu_classes =
+  dropdown_menu.apply({
+    menuAlign: menu_align|default('right')
+  })
+%}
+
+{% set custom_logo %}
+  {% block logo %}{% endblock %}
+{% endset %}
+
+{% set theme_path = directory|default(active_theme_path()) %}
+{% set logo_mobile = source(theme_path ~ '/images/logo-mobile.svg', ignore_missing = true) %}
+{% set logo_desktop = source(theme_path ~ '/images/logo.svg', ignore_missing = true) %}
+
+{% set default_logo %}
+  <a href="{{ home_url|default('/') }}" class="inline-block w-full" rel="home" aria-label="{{ 'Home'|t }}">
+    <div class="branding w-full md:h-auto!">
+      {% if logo_mobile is not empty %}
+        <span class="md:hidden h-full max-h-full [&_svg]:h-full [&_svg]:w-auto [&_path]:fill-current">
+          {{ logo_mobile|raw }}
+        </span>
+        <span class="max-md:hidden block w-full [&_svg]:w-full! [&_svg]:h-auto! [&_path]:fill-current">
+          {{ logo_desktop|raw }}
+        </span>
+      {% else %}
+        <span class="block w-full [&_svg]:w-full! [&_svg]:h-auto! [&_path]:fill-current">
+          {{ logo_desktop|raw }}
+        </span>
+      {% endif %}
+    </div>
+  </a>
+{% endset %}
+
+{% set is_custom_logo = custom_logo|trim is not empty and 'canvas--slot-empty-placeholder' not in custom_logo %}
+
+{% set final_logo %}
+  {% if is_custom_logo %}
+    {{ custom_logo }}
+  {% elseif 'canvas--slot-empty-placeholder' in custom_logo %}
+    {{ custom_logo|replace({'<div class="canvas--slot-empty-placeholder"></div>': default_logo})|raw }}
+  {% else %}
+    {{ default_logo }}
+  {% endif %}
+{% endset %}
+
+{% set modal_logo %}
+  {% if is_custom_logo %}
+    {{ custom_logo }}
+  {% else %}
+    {{ default_logo }}
+  {% endif %}
+{% endset %}
+
+<div class="navbar relative z-[500] container mx-auto flex justify-between p-2 px-4 md:py-4 border-b border-[var(--navbar-border)]">
+  <div class="navbar--logo self-center md:flex-initial md:basis-1/6 md:max-w-[200px] [&>div]:flex [&>div]:flex-col [&>div]:justify-center">
+    {{ final_logo }}
+  </div>
+
+  <div
+    class="navbar--menu fixed inset-0 top-[calc(var(--drupal-displace-offset-top,0px)+var(--gin-toolbar-height,0px)-var(--navbar-scroll-top,0px))] grid shrink-1 grow-1 grid-cols-[1fr] grid-rows-[auto_1fr_auto] flex-col items-stretch justify-start bg-background pb-8 md:static md:flex md:flex-1 md:basis-5/6 md:h-auto md:flex-row md:items-center md:bg-transparent md:pb-0"
+  >
+    <div
+      class="navbar--modal-top relative z-[500] col-span-1 col-start-1 row-span-1 row-start-1 container mx-auto flex w-full justify-between p-2 px-4 md:hidden"
+    >
+      <div
+        class="navbar--modal-logo flex min-h-[44px] flex-1 flex-col items-start justify-center md:hidden [&>div]:flex [&>div]:flex-col [&>div]:justify-center"
+      >
+        {{ modal_logo }}
+      </div>
+
+      <button
+        class="navbar--hide-menu flex min-h-[44px] min-w-[44px] flex-0 cursor-pointer items-center justify-center md:hidden"
+        aria-label="{{ 'Hide menu'|t }}"
+      >
+        {{
+          include(
+            '@whitecross/components/icon/icon.twig',
+            {
+              icon: 'x',
+              icon_size: 'large'
+            }
+          )
+        }}
+      </button>
+    </div>
+
+    <div
+      class="navbar--dropdown-menu-wrapper relative col-span-1 col-start-1 row-span-1 row-start-2 container mx-auto min-h-0 w-full flex-1 p-2 px-4 after:pointer-events-none after:absolute after:bottom-0 after:z-3 after:h-24 after:w-full after:bg-linear-to-b after:from-transparent after:to-background after:content-[''] md:p-0 md:after:content-none"
+    >
+      <div class="{{ dropdown_menu_classes }}">
+        {% block navigation %}
+
+        {% endblock %}
+      </div>
+    </div>
+
+    <div
+      class="navbar--links col-span-1 col-start-1 row-span-1 row-start-3 ml-auto flex w-full flex-initial shrink-0 grow-0 flex-col justify-end gap-2 md:w-auto md:flex-row [&>*:first-child]:ml-2"
+    >
+      {% block links %}
+
+      {% endblock %}
+    </div>
+  </div>
+
+  <div class="navbar--hamburger-container flex min-h-[44px] min-w-[44px] shrink-0 grow-0 items-center justify-center md:hidden">
+    <button class="navbar--hamburger flex items-center justify-center" aria-label="{{ 'Show menu'|t }}">
+      {{
+        include(
+          '@whitecross/components/icon/icon.twig',
+          {
+            icon: 'list',
+            icon_size: 'large'
+          }
+        )
+      }}
+    </button>
+  </div>
+</div>

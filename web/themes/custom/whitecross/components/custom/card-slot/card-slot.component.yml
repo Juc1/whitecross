@@ -1,0 +1,72 @@
+"$schema": "https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json"
+name: Card (with Slot)
+group: Custom
+description: A card layout component where the body content is provided by a slot.
+props:
+  type: object
+  required:
+    - orientation
+    - style
+  properties:
+    background:
+      type: string
+      title: Background
+      enum:
+        - default
+        - accent
+        - primary
+        - inverted
+      meta:enum:
+        default: Default
+        accent: Accent
+        primary: Primary
+        inverted: Inverted
+      examples:
+        - default
+    style:
+      type: string
+      title: Style
+      enum:
+        - framed
+        - full
+      meta:enum:
+        framed: Framed
+        full: Full width
+      examples:
+        - framed
+    orientation:
+      type: string
+      title: Orientation
+      enum:
+        - vertical
+        - horizontal
+      meta:enum:
+        vertical: Vertical
+        horizontal: Horizontal
+      examples:
+        - vertical
+    image_ratio:
+      type: string
+      title: Image ratio
+      enum:
+        - video
+        - square
+      meta:enum:
+        video: Video (16:9)
+        square: Square (1:1)
+      default: video
+      examples:
+        - video
+    is_text_centered:
+      type: boolean
+      title: Center text
+      examples:
+        - false
+
+slots:
+  content:
+    title: Card Content
+    description: "Slot for card body content (headings, description, buttons, lists)."
+  footer:
+    title: Card Footer
+    description: "Slot for card footer content (buttons, CTA links, author profile, tags)."

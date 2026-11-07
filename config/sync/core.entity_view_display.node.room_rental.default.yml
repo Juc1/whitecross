@@ -1,0 +1,53 @@
+uuid: c1650a21-ecfe-430f-8ad9-44c1739914b5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.room_rental.body
+    - field.field.node.room_rental.field_image
+    - image.style.large
+    - node.type.room_rental
+  module:
+    - image
+    - manage_display
+    - text
+id: node.room_rental.default
+targetEntityType: node
+bundle: room_rental
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: large
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: -1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  title:
+    type: title
+    label: hidden
+    settings:
+      link_to_entity: true
+      tag: h2
+    third_party_settings: {  }
+    weight: -49
+    region: content
+hidden:
+  created: true
+  uid: true

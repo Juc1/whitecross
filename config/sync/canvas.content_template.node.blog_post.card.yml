@@ -1,0 +1,46 @@
+uuid: fa43a24b-76a8-4897-9e89-eb30769d21d1
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.sdc.daisyui_sdc.daisy-card-teaser
+    - core.base_field_override.node.blog_post.title
+    - core.entity_view_mode.node.card
+    - field.field.node.blog_post.field_blog_image
+    - image.style.canvas_parametrized_width
+    - node.type.blog_post
+  module:
+    - file
+    - node
+    - options
+id: node.blog_post.card
+content_entity_type_id: node
+content_entity_type_bundle: blog_post
+content_entity_type_view_mode: card
+component_tree:
+  '0:163be2a2-a859-4969-8428-e486971df239':
+    uuid: 163be2a2-a859-4969-8428-e486971df239
+    component_id: sdc.daisyui_sdc.daisy-card-teaser
+    component_version: 3af0536c7a0fee3e
+    inputs:
+      heading_text:
+        sourceType: entity-field
+        expression: 'ℹ︎␜entity:node:blog_post␝title␞␟value'
+      level: 3
+      url:
+        sourceType: host-entity-url
+        absolute: false
+      media:
+        sourceType: entity-field
+        expression: 'ℹ︎␜entity:node:blog_post␝field_blog_image␞␟{src↠src_with_alternate_widths,alt↠alt,width↠width,height↠height}'
+      aspect_ratio: '3:2'
+      is_text_centered: false
+      orientation: vertical
+      style: full
+      size: md
+      background: default
+      shadow: xl
+      border_top: false
+      border_top_color: primary
+exposed_slots: {  }
+page_variant: null

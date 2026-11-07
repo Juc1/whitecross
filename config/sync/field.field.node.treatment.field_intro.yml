@@ -1,0 +1,21 @@
+uuid: 4ed423af-0f00-4cd3-b78b-1e00698ea9f1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_intro
+    - node.type.treatment
+  module:
+    - text
+id: node.treatment.field_intro
+field_name: field_intro
+entity_type: node
+bundle: treatment
+label: Intro
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

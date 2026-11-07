@@ -1,0 +1,11 @@
+{% embed 'byte_theme:scrolling-video' with {
+  media: {
+    src: 'sites/default/files/videos/water.mp4'
+  }
+} only %}
+  {% block scrolling_video_slot %}
+    {{ include('byte_theme:raw-html', {
+      html: 'Touch is the first language we speak.<br>- Stephen Gaskin'
+    }, with_context: false) }}
+  {% endblock %}
+{% endembed %}

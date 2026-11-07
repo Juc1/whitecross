@@ -1,0 +1,32 @@
+name: Background Gradient Changer
+status: experimental
+description: A div that cycles through three background gradients using GSAP.
+
+props:
+  type: object
+  properties:
+    gradient1:
+      type: string
+      title: Gradient 1
+      description: The starting gradient.
+      default: "linear-gradient(to right, #ff6347, #ffd700)"
+    gradient2:
+      type: string
+      title: Gradient 2
+      description: The second gradient in the sequence.
+      default: "linear-gradient(to right, #4682b4, #add8e6)"
+    gradient3:
+      type: string
+      title: Gradient 3
+      description: The third gradient in the sequence.
+      default: "linear-gradient(to right, #3cb371, #98fb98)"
+    content:
+      type: string
+      title: Content
+      description: Simple text content for the div. If used, the slot will be ignored.
+      default: ""
+
+slots:
+  children:
+    title: Content
+    description: The rich content of the div.

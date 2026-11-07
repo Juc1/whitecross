@@ -1,0 +1,25 @@
+uuid: ea35cd3e-352e-4857-8ac6-292f2f5ebc91
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - type_tray
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+  type_tray:
+    type_category: _none
+    type_thumbnail: ''
+    type_icon: /themes/whitecross/images/type-tray/calendar.svg
+    type_description: ''
+    existing_nodes_link_text: 'View existing <em class="placeholder">Blog post</em> content'
+    type_weight: 0
+name: 'Blog post'
+type: blog_post
+description: null
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: false

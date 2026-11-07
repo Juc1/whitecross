@@ -1,0 +1,37 @@
+{% set list_wrapper =
+  html_cva(
+    base: ['bullet-list-marker', 'font-normal', 'text-base md:text-lg xl:text-xl', 'text-foreground', '[&_ol]:list-decimal [&_ol]:pl-5'],
+    variants: {
+      hasIcon: {
+        yes: 'has-icon',
+        no: ''
+      }
+    }
+  )
+%}
+
+{% set is_icon = icon is not empty ? 'yes' : 'no' %}
+{% set list_classes =
+  list_wrapper.apply({
+    hasIcon: is_icon
+  })
+%}
+
+{% set marker_style = '' %}
+{% if content is not empty %}
+  {% set marker_style = marker_style ~ "--marker-content: '" ~ (content|escape('html_attr')) ~ "'; " %}
+{% endif %}
+{% if font_size is not empty %}
+  {% set marker_style = marker_style ~ '--marker-font-size: ' ~ (font_size|escape('html_attr')) ~ '; ' %}
+{% endif %}
+{% if color is not empty %}
+  {% set marker_style = marker_style ~ '--marker-color: ' ~ (color|escape('html_attr')) ~ '; ' %}
+{% endif %}
+{% if icon is not empty %}
+  {% set marker_style = marker_style ~ "--marker-mask-url: url('/themes/custom/whitecross/icons/phosphor/" ~ (icon|escape('html_attr')) ~ ".svg'); "
+  %}
+{% endif %}
+
+<div class="{{ list_classes }}" style="{{ marker_style|raw }}">
+  {{ text|raw }}
+</div>

@@ -1,0 +1,50 @@
+# Composer dependencies and Drupal core
+/vendor/
+/web/core/
+
+# Contrib modules, themes, and profiles managed by Composer
+/web/modules/contrib/
+/web/themes/contrib/
+/web/profiles/contrib/
+/web/libraries/
+
+# User-uploaded files, cached assets, and private files
+/web/sites/*/files/
+/web/sites/*/private/
+
+# Drupal settings containing database credentials and secrets
+/web/sites/*/settings.php
+/web/sites/*/settings.local.php
+/web/sites/*/services.local.yml
+
+# Google API client credentials in config
+config/sync/google_api_client.google_api_service_client.*.yml
+
+# Environment secrets
+.env
+.env.*
+*.env
+
+# Build and package manager dependencies
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Temporary test screenshots, DB dumps, and backups
+dbsql/
+*.sql
+*.tar.gz
+*.backup*
+canvas-*.png
+hero-*.png
+screenshot_*.png
+turnkey-*.png
+.playwright-mcp/
+
+# OS and IDE files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*~

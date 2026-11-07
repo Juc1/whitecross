@@ -1,0 +1,42 @@
+{#
+/**
+ * @file
+ * Debugging indicator for active Tailwind breakpoints.
+ */
+#}
+<style>
+  .tw-debug-badge { 
+    position: fixed; bottom: 16px; right: 16px; z-index: 99999; pointer-events: none; display: flex; align-items: center; gap: 6px;
+  padding: 6px 14px; background: rgba(15, 23, 42, 0.9); color: #ffffff; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 13px; font-weight: 700; border-radius: 9999px; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.2); backdrop-filter: blur(8px); } 
+  
+  .tw-debug-bp::before { 
+    content: "XS (<640px)"; color: #f87171; } 
+  
+  @media(min-width: 640px) { 
+    .tw-debug-bp::before { 
+      content: "SM (≥640px)"; color: #fb923c; } }
+
+  @media (min-width: 768px) { 
+.tw-debug-bp::before { 
+  content:"MD (≥768px)"; color: #facc15; } } 
+  
+  @media (min-width: 1024px) { 
+ .tw-debug-bp::before { 
+  content: "LG (≥1024px)"; color: #4ade80; } } 
+    
+    @media (min-width: 1280px) { 
+      .tw-debug-bp::before { 
+        content: "XL (≥1280px)"; color: #38bdf8; } } 
+  
+  @media (min-width: 1536px) { 
+    .tw-debug-bp::before {
+  content: "2XL (≥1536px)"; 
+  color: #c084fc; } }
+</style>
+
+<div class="tw-debug-badge">
+  <span style="opacity: 0.75; font-weight: 600;">Tailwind:</span>
+  <span class="tw-debug-bp"></span>
+</div>

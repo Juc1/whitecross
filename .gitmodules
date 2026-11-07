@@ -1,0 +1,9 @@
+[submodule "web/modules/custom/juc_sdc"]
+	path = web/modules/custom/juc_sdc
+	url = https://github.com/Juc1/juc_sdc.git
+[submodule "web/modules/custom/daisyui_sdc"]
+	path = web/modules/custom/daisyui_sdc
+	url = https://github.com/Juc1/daisyui-sdc.git
+[submodule "web/modules/custom/daisyui_style_guide"]
+	path = web/modules/custom/daisyui_style_guide
+	url = https://github.com/Juc1/daisyui_style_guide.git

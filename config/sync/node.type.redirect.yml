@@ -1,0 +1,26 @@
+uuid: 45d0516a-0705-4b0b-b31c-533eb6dfe539
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - type_tray
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+  type_tray:
+    type_category: _none
+    type_thumbnail: ''
+    type_icon: /themes/whitecross/images/type-tray/reload.svg
+    type_description: ''
+    existing_nodes_link_text: 'View existing <em class="placeholder">Redirect</em> content'
+    type_weight: 0
+name: Redirect
+type: redirect
+description: null
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true

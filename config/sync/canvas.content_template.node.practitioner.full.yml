@@ -1,0 +1,206 @@
+uuid: 194d1d9f-7e88-4371-a81f-f7975b60e2f4
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.sdc.daisyui_sdc.daisy-button
+    - canvas.component.sdc.daisyui_sdc.daisy-hero-with-figure-slots
+    - canvas.component.sdc.whitecross.group
+    - canvas.component.sdc.whitecross.heading
+    - canvas.component.sdc.whitecross.text
+    - core.base_field_override.node.practitioner.title
+    - core.entity_view_mode.node.full
+    - field.field.node.practitioner.field_bio
+    - field.field.node.practitioner.field_company__link
+    - field.field.node.practitioner.field_email_link
+    - field.field.node.practitioner.field_face
+    - field.field.node.practitioner.field_landline
+    - field.field.node.practitioner.field_mobile
+    - field.field.node.practitioner.field_second
+    - filter.format.full_html
+    - image.style.canvas_parametrized_width
+    - node.type.practitioner
+  module:
+    - file
+    - node
+    - options
+id: node.practitioner.full
+content_entity_type_id: node
+content_entity_type_bundle: practitioner
+content_entity_type_view_mode: full
+component_tree:
+  '0:content:0:448dc177-ab7e-4e5d-b9a8-73b1bc06ec61':
+    parent_uuid: dd9ebf72-8149-41f7-af92-361865b8d706
+    slot: content
+    uuid: 448dc177-ab7e-4e5d-b9a8-73b1bc06ec61
+    component_id: sdc.whitecross.heading
+    component_version: b41446e5cb4deda5
+    inputs:
+      heading_text:
+        sourceType: entity-field
+        expression: 'ℹ︎␜entity:node:practitioner␝title␞␟value'
+      level: 1
+      text_size: heading-responsive-4xl
+      text_color: default
+      align: left
+      font_style: default
+  '0:content:1:d077e17b-4a7d-4ab4-a31d-49bdae6ff698':
+    parent_uuid: dd9ebf72-8149-41f7-af92-361865b8d706
+    slot: content
+    uuid: d077e17b-4a7d-4ab4-a31d-49bdae6ff698
+    component_id: sdc.whitecross.text
+    component_version: 69de1c8ca50b46e5
+    inputs:
+      text:
+        sourceType: entity-field
+        expression: 'ℹ︎␜entity:node:practitioner␝field_bio␞␟processed'
+      text_size: normal
+      line_height: default
+      text_color: default
+  '0:content:2:8d8daac0-6b52-4627-ae7c-9b8c55e82731':
+    parent_uuid: dd9ebf72-8149-41f7-af92-361865b8d706
+    slot: content
+    uuid: 8d8daac0-6b52-4627-ae7c-9b8c55e82731
+    component_id: sdc.whitecross.group
+    component_version: 5b8517841c0015ea
+    inputs:
+      flex_direction: row
+      flex_gap: md
+      items_align: start
+      flex_align: start
+      radius: sm
+  '0:content:2:group_slot:0:d465389b-0705-4fdd-aea7-165a259920c0':
+    parent_uuid: 8d8daac0-6b52-4627-ae7c-9b8c55e82731
+    slot: group_slot
+    uuid: d465389b-0705-4fdd-aea7-165a259920c0
+    component_id: sdc.daisyui_sdc.daisy-button
+    component_version: 4a198efe30ac6cb8
+    inputs:
+      label:
+        sourceType: entity-field
+        expression: 'ℹ︎␜entity:node:practitioner␝field_company__link␞␟title'
+      url:
+        sourceType: entity-field
+        expression: 'ℹ︎␜entity:node:practitioner␝field_company__link␞␟uri'
+      style: primary
+      variant: solid
+      size: lg
+      shape: circle
+      radius: default
+      icon: link
+      icon_position: start
+      icon_pack: phosphor
+      tooltip: website
+      open_in_new_tab: false
+      disabled: false
+      button_type: button
+      aria_label: 'Close dialog'
+      title: 'More information'
+      data_theme: dark
+  '0:content:2:group_slot:1:3894451f-1b65-4cba-a028-d53a31d85ab0':
+    parent_uuid: 8d8daac0-6b52-4627-ae7c-9b8c55e82731
+    slot: group_slot
+    uuid: 3894451f-1b65-4cba-a028-d53a31d85ab0
+    component_id: sdc.daisyui_sdc.daisy-button
+    component_version: 4a198efe30ac6cb8
+    inputs:
+      url:
+        sourceType: entity-field
+        expression: 'ℹ︎␜entity:node:practitioner␝field_email_link␞␟url'
+      style: primary
+      variant: solid
+      size: lg
+      shape: circle
+      radius: default
+      icon: envelope
+      icon_position: start
+      icon_pack: phosphor
+      tooltip: email
+      open_in_new_tab: false
+      disabled: false
+      button_type: button
+      aria_label: 'Close dialog'
+      title: 'More information'
+      data_theme: dark
+  '0:content:2:group_slot:2:e66ff661-878f-4bab-b51a-27591f94b5f6':
+    parent_uuid: 8d8daac0-6b52-4627-ae7c-9b8c55e82731
+    slot: group_slot
+    uuid: e66ff661-878f-4bab-b51a-27591f94b5f6
+    component_id: sdc.daisyui_sdc.daisy-button
+    component_version: 4a198efe30ac6cb8
+    inputs:
+      url:
+        sourceType: entity-field
+        expression: 'ℹ︎␜entity:node:practitioner␝field_mobile␞␟url'
+      style: primary
+      variant: solid
+      size: lg
+      shape: circle
+      radius: default
+      icon: whatsapp-logo
+      icon_position: start
+      icon_pack: phosphor
+      tooltip: whatsapp
+      open_in_new_tab: false
+      disabled: false
+      button_type: button
+      aria_label: 'Close dialog'
+      title: 'More information'
+      data_theme: dark
+  '0:content:2:group_slot:3:a8b4f230-4eff-4e3d-8f0d-aa7c626182ab':
+    parent_uuid: 8d8daac0-6b52-4627-ae7c-9b8c55e82731
+    slot: group_slot
+    uuid: a8b4f230-4eff-4e3d-8f0d-aa7c626182ab
+    component_id: sdc.daisyui_sdc.daisy-button
+    component_version: 4a198efe30ac6cb8
+    inputs:
+      label:
+        sourceType: entity-field
+        expression: 'ℹ︎␜entity:node:practitioner␝field_landline␞␟title'
+      url:
+        sourceType: entity-field
+        expression: 'ℹ︎␜entity:node:practitioner␝field_landline␞␟url'
+      style: primary
+      variant: solid
+      size: lg
+      shape: circle
+      radius: default
+      icon: phone-call
+      icon_position: start
+      icon_pack: phosphor
+      tooltip: landline
+      open_in_new_tab: false
+      disabled: false
+      button_type: button
+      aria_label: 'Close dialog'
+      title: 'More information'
+      data_theme: dark
+  '0:dd9ebf72-8149-41f7-af92-361865b8d706':
+    uuid: dd9ebf72-8149-41f7-af92-361865b8d706
+    component_id: sdc.daisyui_sdc.daisy-hero-with-figure-slots
+    component_version: ff3e3f831edb0439
+    inputs:
+      media:
+        sourceType: entity-field
+        expression: 'ℹ︎␜entity:node:practitioner␝field_face␞␟{src↠src_with_alternate_widths,alt↠alt,width↠width,height↠height}'
+      media_position: left
+      layout_ratio: '1:2'
+      mobile_order: media-first
+      media_aspect_ratio: '1:1'
+      media_radius: medium
+      background_color: base-200
+      min_height: medium
+      data_theme: dark
+  '1:52481d21-fa81-41f4-8e26-d99ba1b4b1ff':
+    uuid: 52481d21-fa81-41f4-8e26-d99ba1b4b1ff
+    component_id: sdc.whitecross.text
+    component_version: 69de1c8ca50b46e5
+    inputs:
+      text:
+        sourceType: entity-field
+        expression: 'ℹ︎␜entity:node:practitioner␝field_second␞␟processed'
+      text_size: normal
+      line_height: default
+      text_color: default
+exposed_slots: {  }
+page_variant: null

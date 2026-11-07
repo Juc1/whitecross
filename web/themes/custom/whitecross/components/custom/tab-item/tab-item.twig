@@ -1,0 +1,16 @@
+{% set tab_color = background_color|default(bg_color|default('default')) %}
+{% set tab_theme = null %}
+{% if tab_color == 'pink' %}
+  {% set tab_theme = 'pink' %}
+{% elseif tab_color == 'radley-blue' %}
+  {% set tab_theme = 'blue' %}
+{% elseif tab_color == 'radley-purple' %}
+  {% set tab_theme = 'purple' %}
+{% elseif tab_color in ['blue', 'pink', 'purple'] %}
+  {% set tab_theme = tab_color %}
+{% endif %}
+<div class="tab-panel hidden" data-tab-title="{{ title }}" data-tab-color="{{ tab_color }}"{% if tab_theme %} data-theme="{{ tab_theme }}"{% endif %} role="tabpanel" tabindex="0">
+  {% block content %}
+    {# Tab content goes here #}
+  {% endblock %}
+</div>

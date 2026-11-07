@@ -1,0 +1,7 @@
+_core:
+  default_config_hash: 7QwhifH5gAzkdFMMDFV6XQRrcx4PAvtROZO8rs19nTo
+form_ids:
+  - webform_submission_contact_node_188
+  - webform_submission_contact_node_188_add_form
+  - webform_submission_contact_add_form
+show_form_ids: true

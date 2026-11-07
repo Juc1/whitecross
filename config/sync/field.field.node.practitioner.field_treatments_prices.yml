@@ -1,0 +1,21 @@
+uuid: 8eac39c8-2812-471d-b7e0-62fe590ee9c0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_treatments_prices
+    - node.type.practitioner
+  module:
+    - text
+id: node.practitioner.field_treatments_prices
+field_name: field_treatments_prices
+entity_type: node
+bundle: practitioner
+label: 'Treatments / Prices'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

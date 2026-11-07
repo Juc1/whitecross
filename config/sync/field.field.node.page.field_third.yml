@@ -1,0 +1,21 @@
+uuid: 8d69927a-9698-4419-aef0-4c960ec78629
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_third
+    - node.type.page
+  module:
+    - text
+id: node.page.field_third
+field_name: field_third
+entity_type: node
+bundle: page
+label: Third
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

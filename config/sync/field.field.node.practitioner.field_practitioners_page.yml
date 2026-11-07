@@ -1,0 +1,21 @@
+uuid: 5c62c71b-b642-49d3-8740-1da895a02599
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_practitioners_page
+    - node.type.practitioner
+  module:
+    - text
+id: node.practitioner.field_practitioners_page
+field_name: field_practitioners_page
+entity_type: node
+bundle: practitioner
+label: 'Practitioners Page'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

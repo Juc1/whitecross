@@ -1,0 +1,30 @@
+uuid: 8d611a38-b500-42e6-aca6-a2c48746d561
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.content_recent
+  module:
+    - system
+    - views
+  theme:
+    - whitecross
+id: views_block__content_recent_block_5
+theme: whitecross
+region: content
+weight: -4
+provider: null
+plugin: 'views_block:content_recent-block_5'
+settings:
+  id: 'views_block:content_recent-block_5'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: null
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: /node/187

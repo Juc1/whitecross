@@ -1,0 +1,19 @@
+uuid: 12d791aa-951e-4f69-8a59-976178086a12
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_email
+    - node.type.practitioner
+id: node.practitioner.field_email
+field_name: field_email
+entity_type: node
+bundle: practitioner
+label: Email
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

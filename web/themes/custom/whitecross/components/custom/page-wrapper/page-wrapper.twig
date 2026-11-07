@@ -1,0 +1,32 @@
+{#
+/**
+ * @file
+ * page-wrapper.twig
+ *
+ * Top-level shell for page templates.
+ * Applies the cascading data-theme without imposing layout or margin constraints.
+ */
+#}
+{% set wrapper_attributes = attributes is defined and attributes is not empty ? attributes : create_attribute() %}
+{% set wrapper_theme = theme|default('default') %}
+
+{% set classes = [
+  'page-wrapper',
+  'min-h-screen',
+  'w-full',
+  'flex',
+  'flex-col',
+  'bg-base-100',
+  'text-base-content'
+] %}
+
+{% set wrapper_attributes = wrapper_attributes.addClass(classes) %}
+
+{% if wrapper_theme and wrapper_theme != 'default' %}
+  {% set wrapper_attributes = wrapper_attributes.setAttribute('data-theme', wrapper_theme) %}
+{% endif %}
+
+<div {{ wrapper_attributes }}>
+  {% block content %}
+  {% endblock %}
+</div>

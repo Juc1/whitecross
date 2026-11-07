@@ -1,0 +1,26 @@
+uuid: 5468ede4-03bf-4add-9ce3-705e8c50e761
+langcode: en
+status: false
+dependencies:
+  config:
+    - views.view.blog
+  module:
+    - views
+active_version: fb48f63692e920ff
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_block:blog-block_6'
+        label: 'Blog: Blog sidebar'
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+    fallback_metadata:
+      slot_definitions: null
+label: 'Blog: Blog sidebar'
+id: block.views_block.blog-block_6
+provider: views
+source: block
+source_local_id: 'views_block:blog-block_6'

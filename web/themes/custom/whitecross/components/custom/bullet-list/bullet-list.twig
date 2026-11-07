@@ -1,0 +1,9 @@
+{% set list_wrapper =
+  html_cva(base: ['custom-list', 'font-normal', 'text-base md:text-lg xl:text-xl', 'text-foreground', '[&_ol]:list-decimal [&_ol]:pl-5'])
+%}
+
+{% set list_classes = list_wrapper.apply({}) %}
+
+<div class="{{ list_classes }}">
+  {{ text|raw }}
+</div>

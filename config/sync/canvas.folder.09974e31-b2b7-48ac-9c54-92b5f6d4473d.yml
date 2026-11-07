@@ -1,0 +1,17 @@
+uuid: 09974e31-b2b7-48ac-9c54-92b5f6d4473d
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.sdc.whitecross.cta
+    - canvas.component.sdc.whitecross.hero-billboard
+    - canvas.component.sdc.whitecross.hero-blog
+    - canvas.component.sdc.whitecross.hero-side-by-side
+name: Hero
+configEntityTypeId: component
+weight: 0
+items:
+  - sdc.whitecross.cta
+  - sdc.whitecross.hero-billboard
+  - sdc.whitecross.hero-blog
+  - sdc.whitecross.hero-side-by-side

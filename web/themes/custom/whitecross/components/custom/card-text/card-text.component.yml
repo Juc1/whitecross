@@ -1,0 +1,50 @@
+"$schema": "https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json"
+name: Text card
+group: Custom
+props:
+  type: object
+  properties:
+    heading_text:
+      type: string
+      title: Heading
+      examples:
+        - Premium
+    description:
+      title: Description
+      type: string
+      contentMediaType: text/html
+      x-formatting-context: block
+      examples:
+        - Curabitur nascetur non potenti pede luctus vivamus
+    price:
+      title: Price
+      description: Price
+      type: string
+      examples:
+        - "159"
+    text:
+      title: Text
+      type: string
+      contentMediaType: text/html
+      x-formatting-context: block
+      default: "<ul>
+        <li>Enter rich text</li>
+        <li>Facilisis dictumst letius in</li>
+        <li>Diam mus est faucibus ornare ut consectetuer metus</li>
+        </ul>"
+      examples:
+        - "<ul>
+          <li>Example item 1</li>
+          <li>Example item 2</li>
+          </ul>"
+    promote:
+      type: boolean
+      title: Highlight card
+      default: false
+      examples:
+        - false
+
+slots:
+  footer:
+    title: Footer
+    description: "Slot for buttons or other footer content."

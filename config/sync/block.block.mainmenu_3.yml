@@ -1,0 +1,25 @@
+uuid: 130675a6-d168-4290-bb12-033f33042d53
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - whitecross
+id: mainmenu_3
+theme: whitecross
+region: content
+weight: -2
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: null
+  expand_all_items: false
+visibility: {  }

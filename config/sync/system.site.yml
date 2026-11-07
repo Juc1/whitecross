@@ -1,0 +1,15 @@
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI
+langcode: en
+uuid: 554b6185-3710-4596-9f3a-e00de47c494b
+name: '193 whitecross street'
+mail: admin@193whitecrossstreet.london
+slogan: ''
+page:
+  403: /
+  404: /
+  front: /home
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: en
+mail_notification: ''

@@ -1,0 +1,18 @@
+uuid: 495ffc03-c70f-4418-9159-b6f000e37de5
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.admin
+id: node.admin.title
+field_name: title
+entity_type: node
+bundle: admin
+label: Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

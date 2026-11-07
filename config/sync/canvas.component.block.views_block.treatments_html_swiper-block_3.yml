@@ -1,0 +1,26 @@
+uuid: f4cbd011-fbd6-4c94-a36a-9cd2474684fc
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.treatments_html_swiper
+  module:
+    - views
+active_version: 73b200743b90e334
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_block:treatments_html_swiper-block_3'
+        label: 'Treatments html + swiper: Block 3'
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+    fallback_metadata:
+      slot_definitions: null
+label: 'Treatments html + swiper: Block 3'
+id: block.views_block.treatments_html_swiper-block_3
+provider: views
+source: block
+source_local_id: 'views_block:treatments_html_swiper-block_3'

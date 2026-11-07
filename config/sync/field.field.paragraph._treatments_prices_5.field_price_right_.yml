@@ -1,0 +1,19 @@
+uuid: 3b88ead0-fe36-4338-ae92-6fc0fac23a56
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_price_right_
+    - paragraphs.paragraphs_type._treatments_prices_5
+id: paragraph._treatments_prices_5.field_price_right_
+field_name: field_price_right_
+entity_type: paragraph
+bundle: _treatments_prices_5
+label: 'Price (Right)'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

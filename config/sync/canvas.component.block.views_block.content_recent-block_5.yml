@@ -1,0 +1,26 @@
+uuid: 6f085314-6840-40dc-88c2-8b9551361ae5
+langcode: en
+status: false
+dependencies:
+  config:
+    - views.view.content_recent
+  module:
+    - views
+active_version: a4bdfd436a7b5c1e
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_block:content_recent-block_5'
+        label: 'Recent content: Tax terms with nodes'
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+    fallback_metadata:
+      slot_definitions: null
+label: 'Recent content: Tax terms with nodes'
+id: block.views_block.content_recent-block_5
+provider: views
+source: block
+source_local_id: 'views_block:content_recent-block_5'

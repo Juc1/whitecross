@@ -1,0 +1,20 @@
+uuid: 97971275-608f-4f23-80f5-51f97dd12042
+langcode: en
+status: true
+dependencies:
+  theme:
+    - whitecross
+active_version: 1226426adc368631
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions: {  }
+    fallback_metadata:
+      slot_definitions:
+        tab_items:
+          title: Tabs
+label: Tabs
+id: sdc.whitecross.tabs
+provider: whitecross
+source: sdc
+source_local_id: 'whitecross:tabs'

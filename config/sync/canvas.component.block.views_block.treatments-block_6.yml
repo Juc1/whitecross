@@ -1,0 +1,26 @@
+uuid: 8b632d1c-c5e1-4014-8ca0-35b9d3e467eb
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.treatments
+  module:
+    - views
+active_version: 882d443c5214929d
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_block:treatments-block_6'
+        label: 'Treatments: images'
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+    fallback_metadata:
+      slot_definitions: null
+label: 'Treatments: images'
+id: block.views_block.treatments-block_6
+provider: views
+source: block
+source_local_id: 'views_block:treatments-block_6'

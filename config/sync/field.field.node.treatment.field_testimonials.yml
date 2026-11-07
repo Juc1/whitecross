@@ -1,0 +1,21 @@
+uuid: b30074a0-cb8a-4e88-953d-cb1a584832f1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_testimonials
+    - node.type.treatment
+  module:
+    - text
+id: node.treatment.field_testimonials
+field_name: field_testimonials
+entity_type: node
+bundle: treatment
+label: Testimonials
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

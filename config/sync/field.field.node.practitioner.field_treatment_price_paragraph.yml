@@ -1,0 +1,31 @@
+uuid: a4af9db1-e0fa-4a7e-9779-44de71ebc518
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_treatment_price_paragraph
+    - node.type.practitioner
+    - paragraphs.paragraphs_type.treatment_prices
+  module:
+    - entity_reference_revisions
+id: node.practitioner.field_treatment_price_paragraph
+field_name: field_treatment_price_paragraph
+entity_type: node
+bundle: practitioner
+label: 'Treatment Price Paragraph'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      treatment_prices: treatment_prices
+    negate: 0
+    target_bundles_drag_drop:
+      treatment_prices:
+        weight: 2
+        enabled: true
+field_type: entity_reference_revisions

@@ -1,0 +1,19 @@
+uuid: 83082e54-310c-4030-9804-a4f379322fdb
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_practitioners_page
+field_name: field_practitioners_page
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

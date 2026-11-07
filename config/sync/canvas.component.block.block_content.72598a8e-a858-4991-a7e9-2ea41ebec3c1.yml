@@ -1,0 +1,25 @@
+uuid: 14777446-63a2-402c-9fa6-9924d53a1d87
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:72598a8e-a858-4991-a7e9-2ea41ebec3c1'
+  module:
+    - block_content
+active_version: 5fccfb7a6eb5737b
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'block_content:72598a8e-a858-4991-a7e9-2ea41ebec3c1'
+        label: 'Practitioners top image'
+        label_display: '0'
+        provider: block_content
+        view_mode: full
+    fallback_metadata:
+      slot_definitions: null
+label: 'Practitioners top image'
+id: block.block_content.72598a8e-a858-4991-a7e9-2ea41ebec3c1
+provider: block_content
+source: block
+source_local_id: 'block_content:72598a8e-a858-4991-a7e9-2ea41ebec3c1'

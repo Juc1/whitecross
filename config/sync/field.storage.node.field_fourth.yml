@@ -1,0 +1,19 @@
+uuid: fb619892-a41c-47ca-a5d4-425be6b0e6ea
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_fourth
+field_name: field_fourth
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

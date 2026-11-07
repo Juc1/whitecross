@@ -1,0 +1,26 @@
+uuid: 6327499c-4226-4266-b348-6344c3aedecf
+langcode: en
+status: false
+dependencies:
+  config:
+    - views.view.testimonials
+  module:
+    - views
+active_version: a5185047e90baf28
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_block:testimonials-block_2'
+        label: 'Testimonials: All Testimonials'
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+    fallback_metadata:
+      slot_definitions: null
+label: 'Testimonials: All Testimonials'
+id: block.views_block.testimonials-block_2
+provider: views
+source: block
+source_local_id: 'views_block:testimonials-block_2'

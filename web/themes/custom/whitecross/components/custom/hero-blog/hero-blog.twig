@@ -1,0 +1,49 @@
+{% set classes = classes|default([])|merge(['hero-blog', 'py-8', 'md:py-12'])|filter(v => v is not empty) %}
+
+{% set date_formatted = date ? date|date('m.d.Y') : '' %}
+
+<section class="{{ classes|join(' ') }} cq-full">
+  {% if media.src is defined and media.src is not empty %}
+    <div class="w:full relative [&_.cq-full]:mx-0 [&_.cq-full]:w-full">
+      <div class="container mx-auto px-6">
+        <div class="relative w-full max-w-3xl">
+          {# 3/2 aspect ratio edit: constrain hero image to standard 3:2 ratio with object-cover and max-w-3xl (left-aligned) #}
+          <div class="aspect-3/2 w-full overflow-hidden rounded-md">
+            {% include 'canvas:image' ignore missing with {
+              src: media.src,
+              alt: media.alt|default(''),
+              class: 'h-full w-full object-cover',
+              width: media.width|default(null),
+              height: media.height|default(null),
+              loading: 'eager'
+            } only %}
+          </div>
+        </div>
+      </div>
+      <div class="absolute -bottom-8 z-[-1] h-[calc(33.3%+32px)] w-full bg-accent md:-bottom-12 md:h-[calc(33.3%+48px)]"></div>
+    </div>
+  {% endif %}
+
+  <div class="hero-blog--content container mx-auto mt-8 flex flex-col gap-8 px-6 md:mt-12 md:w-full md:gap-12 lg:w-full xl:w-full">
+    {#
+    <p>
+      <time datetime="{{ date_formatted }}">{{ date_formatted }}</time>
+    </p>
+    #}
+
+    {% set heading_level = level in [1, 2, 3, 4, 5, 6] ? level : 1 %}
+    <h{{ heading_level }} class="heading-responsive-6xl text-left text-inherit">
+      {{ heading_text|default('') }}
+    </h{{ heading_level }}>
+
+    {% if author is not empty %}
+      <p class="hero-blog--author">
+        {% if author_url is not empty %}
+          <a href="{{ author_url }}">By {{ author }}</a>
+        {% else %}
+          By {{ author }}
+        {% endif %}
+      </p>
+    {% endif %}
+  </div>
+</section>

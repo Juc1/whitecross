@@ -1,0 +1,21 @@
+uuid: 7bed35c9-54b1-462b-98d3-c95f1f0ba22a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_section_4
+    - node.type.newsletter
+  module:
+    - text
+id: node.newsletter.field_section_4
+field_name: field_section_4
+entity_type: node
+bundle: newsletter
+label: 'Section 4'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

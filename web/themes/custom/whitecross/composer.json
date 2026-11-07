@@ -1,0 +1,14 @@
+{
+    "name": "drupal/whitecross",
+    "type": "drupal-theme",
+    "description": "Drupal 11 Tailwind CSS v4 and DaisyUI v5 whitecross theme.",
+    "conflict": {
+        "drupal/experience_builder": "*"
+    },
+    "require": {
+        "drupal/cva": "^1"
+    },
+    "require-dev": {
+        "drupal/canvas": "^1"
+    }
+}

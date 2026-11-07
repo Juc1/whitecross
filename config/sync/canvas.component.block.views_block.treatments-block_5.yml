@@ -1,0 +1,26 @@
+uuid: ca4a6de8-6ab9-43b4-bb61-ee07693deb8e
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.treatments
+  module:
+    - views
+active_version: c65ccb87860060da
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_block:treatments-block_5'
+        label: 'Treatments: grid fields'
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+    fallback_metadata:
+      slot_definitions: null
+label: 'Treatments: grid fields'
+id: block.views_block.treatments-block_5
+provider: views
+source: block
+source_local_id: 'views_block:treatments-block_5'

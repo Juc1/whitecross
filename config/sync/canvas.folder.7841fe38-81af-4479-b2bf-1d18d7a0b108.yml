@@ -1,0 +1,31 @@
+uuid: 7841fe38-81af-4479-b2bf-1d18d7a0b108
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.sdc.daisyui_sdc.daisy-badge
+    - canvas.component.sdc.daisyui_sdc.daisy-button
+    - canvas.component.sdc.daisyui_sdc.daisy-card-pricing
+    - canvas.component.sdc.daisyui_sdc.daisy-card-teaser
+    - canvas.component.sdc.daisyui_sdc.daisy-card-testimonial
+    - canvas.component.sdc.daisyui_sdc.daisy-card-with-slots
+    - canvas.component.sdc.daisyui_sdc.daisy-divider
+    - canvas.component.sdc.daisyui_sdc.daisy-hero-centered
+    - canvas.component.sdc.daisyui_sdc.daisy-hero-with-figure
+    - canvas.component.sdc.daisyui_sdc.daisy-hero-with-figure-slots
+    - canvas.component.sdc.daisyui_sdc.daisy-list
+name: DaisyUI
+configEntityTypeId: component
+weight: 0
+items:
+  - sdc.daisyui_sdc.daisy-badge
+  - sdc.daisyui_sdc.daisy-button
+  - sdc.daisyui_sdc.daisy-card-pricing
+  - sdc.daisyui_sdc.daisy-card-teaser
+  - sdc.daisyui_sdc.daisy-card-testimonial
+  - sdc.daisyui_sdc.daisy-card-with-slots
+  - sdc.daisyui_sdc.daisy-divider
+  - sdc.daisyui_sdc.daisy-hero-centered
+  - sdc.daisyui_sdc.daisy-hero-with-figure
+  - sdc.daisyui_sdc.daisy-hero-with-figure-slots
+  - sdc.daisyui_sdc.daisy-list

@@ -1,0 +1,34 @@
+.custom-list {
+  /* Reset default list styles */
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-left: 0;
+  }
+
+  /* Modern custom bullet styling using ::before pseudo-element */
+  ul li {
+    position: relative;
+    padding-left: 5rem; /* Space for the 4rem bullet + gap */
+    margin-bottom: 1.5rem; /* Increased vertical space between adjacent items */
+    min-height: 4rem; /* Ensures the item height is at least the size of the bullet */
+    line-height: 1.7; /* Increases line height for readability with Garamond */
+  }
+
+  ul li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0; /* Aligns the top of the 4rem icon with the top of the text */
+    width: 4rem; /* Exact width of the bullet icon */
+    height: 4rem; /* Exact height of the bullet icon */
+    background-image: url('/sites/default/files/images/feather.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  ul li:last-child {
+    margin-bottom: 0;
+  }
+}

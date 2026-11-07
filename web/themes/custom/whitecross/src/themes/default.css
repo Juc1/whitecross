@@ -1,0 +1,36 @@
+/* 193 Whitecross Street Clinic - DaisyUI Theme */
+@plugin "daisyui/theme" {
+  name: "whitecross";
+  default: true;
+  prefersdark: false;
+  color-scheme: "light";
+
+  /* Canvas & Background Surfaces */
+  --color-base-100: #FFFFFF;              /* Pure white card surfaces */
+  --color-base-200: #FBF9F5;              /* Warm Alabaster main background canvas */
+  --color-base-300: #F2EDE4;              /* Warm Stone containers & alternating sections */
+  --color-base-content: #1A1A1A;          /* Obsidian Charcoal body typography */
+
+  /* Brand Primary: Warm Burnished Bronze */
+  --color-primary: #735B2B;               /* Primary buttons, active tabs, key actions */
+  --color-primary-content: #FFFFFF;       /* Crisp white text on primary buttons */
+
+  /* Brand Secondary: Antique Gold / Light Bronze */
+  --color-secondary: #8C6D38;             /* Badges, subheadings, micro-accents */
+  --color-secondary-content: #FFFFFF;
+
+  /* Accent: Muted Warm Bronze */
+  --color-accent: #A68A56;
+  --color-accent-content: #FFFFFF;
+
+  /* Neutral: Obsidian Ink & Dividers */
+  --color-neutral: #1A1A1A;               /* Dark footer, deep obsidian accents */
+  --color-neutral-content: #FBF9F5;       /* Warm alabaster text on dark background */
+
+  /* Architectural & Geometry Tokens */
+  --radius-selector: 0.25rem;             /* 4px crisp tailored radius for pills */
+  --radius-field: 0.25rem;                /* 4px crisp inputs */
+  --radius-box: 0.5rem;                   /* 8px elegant card corners */
+  --border: 1px;                          /* 1px architectural hairline dividers */
+  --depth: 1;                             /* Low-contrast ambient depth, no heavy drop shadows */
+}

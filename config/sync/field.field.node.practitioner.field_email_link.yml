@@ -1,0 +1,23 @@
+uuid: a412f1ba-8801-40dc-8d6a-e283340b59fc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_email_link
+    - node.type.practitioner
+  module:
+    - link
+id: node.practitioner.field_email_link
+field_name: field_email_link
+entity_type: node
+bundle: practitioner
+label: Email
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

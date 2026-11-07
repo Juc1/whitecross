@@ -1,0 +1,73 @@
+uuid: 960150a4-c9f0-42b2-aff7-9ae436432e00
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.block.views_block.blog-block_1
+    - canvas.component.block.views_block.blog-block_2
+    - canvas.component.block.views_block.blog-block_6
+    - canvas.component.block.views_block.clinic-block_1
+    - canvas.component.block.views_block.comments_recent-block_1
+    - canvas.component.block.views_block.content_recent-block_1
+    - canvas.component.block.views_block.content_recent-block_2
+    - canvas.component.block.views_block.content_recent-block_5
+    - canvas.component.block.views_block.content_recent-block_6
+    - canvas.component.block.views_block.content_recent-block_7
+    - canvas.component.block.views_block.content_recent-block_8
+    - canvas.component.block.views_block.practitioners-block_1
+    - canvas.component.block.views_block.practitioners-block_3
+    - canvas.component.block.views_block.practitioners-block_4
+    - canvas.component.block.views_block.room_rental-block_1
+    - canvas.component.block.views_block.room_rental-block_2
+    - canvas.component.block.views_block.room_rental-block_3
+    - canvas.component.block.views_block.taxonomy_term_with_nodes-block_1
+    - canvas.component.block.views_block.taxonomy_terms-block_1
+    - canvas.component.block.views_block.testimonials-block_1
+    - canvas.component.block.views_block.testimonials-block_2
+    - canvas.component.block.views_block.testimonials-block_7
+    - canvas.component.block.views_block.treatments-block_1
+    - canvas.component.block.views_block.treatments-block_2
+    - canvas.component.block.views_block.treatments-block_3
+    - canvas.component.block.views_block.treatments-block_4
+    - canvas.component.block.views_block.treatments-block_5
+    - canvas.component.block.views_block.treatments-block_6
+    - canvas.component.block.views_block.treatments_html_swiper-block_1
+    - canvas.component.block.views_block.treatments_html_swiper-block_2
+    - canvas.component.block.views_block.treatments_html_swiper-block_3
+    - canvas.component.block.views_block.who_s_online-who_s_online_block
+name: 'Lists (Views)'
+configEntityTypeId: component
+weight: 0
+items:
+  - block.views_block.blog-block_1
+  - block.views_block.blog-block_2
+  - block.views_block.blog-block_6
+  - block.views_block.clinic-block_1
+  - block.views_block.comments_recent-block_1
+  - block.views_block.content_recent-block_1
+  - block.views_block.content_recent-block_2
+  - block.views_block.content_recent-block_5
+  - block.views_block.content_recent-block_6
+  - block.views_block.content_recent-block_7
+  - block.views_block.content_recent-block_8
+  - block.views_block.practitioners-block_1
+  - block.views_block.practitioners-block_3
+  - block.views_block.practitioners-block_4
+  - block.views_block.room_rental-block_1
+  - block.views_block.room_rental-block_2
+  - block.views_block.room_rental-block_3
+  - block.views_block.taxonomy_term_with_nodes-block_1
+  - block.views_block.taxonomy_terms-block_1
+  - block.views_block.testimonials-block_1
+  - block.views_block.testimonials-block_2
+  - block.views_block.testimonials-block_7
+  - block.views_block.treatments-block_1
+  - block.views_block.treatments-block_2
+  - block.views_block.treatments-block_3
+  - block.views_block.treatments-block_4
+  - block.views_block.treatments-block_5
+  - block.views_block.treatments-block_6
+  - block.views_block.treatments_html_swiper-block_1
+  - block.views_block.treatments_html_swiper-block_2
+  - block.views_block.treatments_html_swiper-block_3
+  - block.views_block.who_s_online-who_s_online_block

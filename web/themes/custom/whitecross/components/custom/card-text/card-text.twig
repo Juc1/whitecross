@@ -1,0 +1,55 @@
+{% set is_promoted = promote|default(false) ? 'yes' : 'no' %}
+
+{% set card =
+  html_cva(
+    base: ['group relative flex flex-col gap-4 rounded-sm p-5 shadow-lg transition-colors duration-300 md:gap-6 xl:gap-7 2xl:p-8'],
+    variants: {
+      promoted: {
+        no: ['bg-card text-card-foreground hover:bg-primary hover:text-primary-foreground'],
+        yes: ['bg-primary text-primary-foreground hover:bg-primary/80']
+      }
+    }
+  )
+%}
+
+{% set card_classes =
+  card.apply({
+    promoted: is_promoted
+  })
+%}
+
+<article class="{{ card_classes }}">
+  {# Wrap top content in a flex-grow div to push everything else down #}
+  <div class="flex flex-grow flex-col gap-4">
+    <header class="flex flex-col gap-2">
+      <h3 class="text-left text-inherit text-[1.375rem] leading-tight font-bold">
+        {{ heading_text|default('') }}
+      </h3>
+
+      {% if text is not empty %}
+        <div class="text-lg leading-[1.2] transition-colors duration-300 group-hover:text-white hover:text-white [&_*]:group-hover:text-white [&_*]:hover:text-white">
+          {{ text|raw }}
+        </div>
+      {% endif %}
+    </header>
+
+    {# The price is now inside the flex-grow container's flow, but we can position it at the end of this section #}
+    <div class="border-silver mt-auto border-t pt-4">
+      <h4 class="flex text-2xl leading-none lg:text-3xl 2xl:text-[2.25rem] [&_sup]:!text-[60%]">{{ price }}</h4>
+    </div>
+  </div>
+
+  {% if description is not empty %}
+    <div class="rich-text border-t border-foreground/50 pt-4 text-inherit md:pt-6 2xl:pt-7 [&_li]:text-base [&_ul]:my-0 [&_p]:mb-2 [&_p:last-child]:mb-0">
+      {% block richtext %}
+        {{ description|raw }}
+      {% endblock %}
+    </div>
+  {% endif %}
+
+  <footer class="mt-auto">
+    {% block footer %}
+
+    {% endblock %}
+  </footer>
+</article>

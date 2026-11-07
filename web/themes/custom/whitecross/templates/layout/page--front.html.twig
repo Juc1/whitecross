@@ -1,0 +1,33 @@
+<div class="layout-container min-h-screen bg-base-200">
+  <header role="banner">
+    {% embed 'whitecross:navbar'
+      with {
+        menu_align: 'center',
+        label: null,
+        attributes: null
+      }
+    %}
+      {% block navigation %}
+        {{ drupal_menu('main') }}
+      {% endblock %}
+    {% endembed %}
+  </header>
+
+  {{ page.primary_menu }}
+
+  <main role="main">
+    <a id="main-content" tabindex="-1"></a>
+    <div class="layout-content">
+      {{ page.content }}
+    </div>
+  </main>
+
+  {% if page.footer %}
+    <footer role="contentinfo">
+      {{ page.footer }}
+    </footer>
+  {% endif %}
+</div>
+
+{% include directory ~ '/templates/includes/footer/footer-home.html.twig' %}
+

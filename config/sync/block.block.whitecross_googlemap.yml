@@ -1,0 +1,28 @@
+uuid: 92105754-6da5-455c-92c1-a2e59bb77216
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:f935cae2-e9b3-4421-8902-421a9f6887aa'
+  module:
+    - block_content
+    - system
+  theme:
+    - whitecross
+id: whitecross_googlemap
+theme: whitecross
+region: content
+weight: -8
+provider: null
+plugin: 'block_content:f935cae2-e9b3-4421-8902-421a9f6887aa'
+settings:
+  id: 'block_content:f935cae2-e9b3-4421-8902-421a9f6887aa'
+  label: 'Google map'
+  label_display: '0'
+  provider: block_content
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /contact

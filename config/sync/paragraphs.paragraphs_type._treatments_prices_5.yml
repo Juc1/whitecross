@@ -1,0 +1,9 @@
+uuid: 40f819da-9a98-4b96-aacb-b51543748c7a
+langcode: en
+status: true
+dependencies: {  }
+id: _treatments_prices_5
+label: ' Treatments Prices 5'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

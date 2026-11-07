@@ -1,0 +1,42 @@
+/* Base bullet-list-svg styling (resets) */
+.bullet-list-svg ul {
+  list-style-type: none !important;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.bullet-list-svg ul li {
+  position: relative;
+  padding-left: 1.75rem; /* Space for the icon */
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.bullet-list-svg ul li::marker {
+  content: none !important;
+}
+
+.bullet-list-svg ul li:last-child {
+  margin-bottom: 0;
+}
+
+/* SVG Bullet via CSS Masking */
+.bullet-list-svg ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.45em;
+  width: 0.75em;
+  height: 0.75em;
+  background-color: var(--bullet-color, currentColor);
+
+  /* Use CSS Masking to render any SVG path in any color */
+  mask-image: var(--bullet-mask-url);
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-image: var(--bullet-mask-url);
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+}

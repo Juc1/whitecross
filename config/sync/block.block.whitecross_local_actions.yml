@@ -1,0 +1,20 @@
+uuid: 7ea84f70-c85b-44c3-9735-1ace09dbc37d
+langcode: en
+status: true
+dependencies:
+  theme:
+    - whitecross
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: whitecross_local_actions
+theme: whitecross
+region: content
+weight: -9
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

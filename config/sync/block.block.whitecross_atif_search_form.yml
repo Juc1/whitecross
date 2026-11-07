@@ -1,0 +1,23 @@
+uuid: 48153280-6741-4e88-9439-b34b38fa9c93
+langcode: en
+status: false
+dependencies:
+  module:
+    - search
+  theme:
+    - whitecross
+_core:
+  default_config_hash: za-39d5WDUg6XvbyqSnuVYEeq6QM4qKJxW8MnoAha5A
+id: whitecross_atif_search_form
+theme: whitecross
+region: content
+weight: 4
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: ''
+  label_display: '0'
+  provider: search
+  page_id: null
+visibility: {  }

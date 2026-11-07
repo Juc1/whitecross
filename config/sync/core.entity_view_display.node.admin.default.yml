@@ -1,0 +1,49 @@
+uuid: 392c9ebf-7cb5-4c54-a799-d15379ac41e8
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment_node_admin.default
+    - field.field.node.admin.body
+    - field.field.node.admin.comment_node_admin
+    - node.type.admin
+  module:
+    - comment
+    - text
+id: node.admin.default
+targetEntityType: node
+bundle: admin
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  comment_node_admin:
+    type: comment_default
+    label: hidden
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 101
+    region: content
+hidden:
+  created: true
+  uid: true

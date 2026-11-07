@@ -1,0 +1,22 @@
+uuid: e49d6ba0-d526-465c-8c37-3c816ee51040
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - whitecross
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: whitecross_atif_system_main
+theme: whitecross
+region: content
+weight: -6
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: ''
+  label_display: '0'
+  provider: system
+visibility: {  }

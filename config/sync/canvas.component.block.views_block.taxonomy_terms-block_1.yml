@@ -1,0 +1,26 @@
+uuid: 3f417f89-332e-4a63-977a-9a50b25455cd
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.taxonomy_terms
+  module:
+    - views
+active_version: aef396795b85e320
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_block:taxonomy_terms-block_1'
+        label: 'Taxonomy Terms: Treatments'
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+    fallback_metadata:
+      slot_definitions: null
+label: 'Taxonomy Terms: Treatments'
+id: block.views_block.taxonomy_terms-block_1
+provider: views
+source: block
+source_local_id: 'views_block:taxonomy_terms-block_1'

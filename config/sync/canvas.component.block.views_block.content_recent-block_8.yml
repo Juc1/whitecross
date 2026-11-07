@@ -1,0 +1,26 @@
+uuid: 7ee0a5c5-d9cc-4e6e-b29c-c5fa4f401b6a
+langcode: en
+status: false
+dependencies:
+  config:
+    - views.view.content_recent
+  module:
+    - views
+active_version: 6ce94cc5f8f82f1c
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_block:content_recent-block_8'
+        label: 'Recent content: Treatments sidebar'
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+    fallback_metadata:
+      slot_definitions: null
+label: 'Recent content: Treatments sidebar'
+id: block.views_block.content_recent-block_8
+provider: views
+source: block
+source_local_id: 'views_block:content_recent-block_8'

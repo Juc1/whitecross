@@ -1,0 +1,36 @@
+uuid: 910684e2-faf5-475e-84ac-24e058f24334
+langcode: en
+status: false
+dependencies:
+  module:
+    - node
+    - system
+  theme:
+    - whitecross
+_core:
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
+id: whitecross_page_title
+theme: whitecross
+region: content
+weight: -7
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    context_mapping: {  }
+    pages: '<front>'
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      blog_post: blog_post
+      practitioner: practitioner

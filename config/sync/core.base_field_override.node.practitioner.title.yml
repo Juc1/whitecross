@@ -1,0 +1,18 @@
+uuid: 6c0f4575-f2ec-4c0d-bc3a-f2b05118e8c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.practitioner
+id: node.practitioner.title
+field_name: title
+entity_type: node
+bundle: practitioner
+label: Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

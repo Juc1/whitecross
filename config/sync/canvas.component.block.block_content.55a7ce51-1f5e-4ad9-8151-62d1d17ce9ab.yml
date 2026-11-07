@@ -1,0 +1,25 @@
+uuid: d634c7e2-6aff-49a4-8f54-9cbd646f07e2
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:55a7ce51-1f5e-4ad9-8151-62d1d17ce9ab'
+  module:
+    - block_content
+active_version: 2eb731ac94f0a4e5
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'block_content:55a7ce51-1f5e-4ad9-8151-62d1d17ce9ab'
+        label: 'Footer contact'
+        label_display: '0'
+        provider: block_content
+        view_mode: full
+    fallback_metadata:
+      slot_definitions: null
+label: 'Footer contact'
+id: block.block_content.55a7ce51-1f5e-4ad9-8151-62d1d17ce9ab
+provider: block_content
+source: block
+source_local_id: 'block_content:55a7ce51-1f5e-4ad9-8151-62d1d17ce9ab'

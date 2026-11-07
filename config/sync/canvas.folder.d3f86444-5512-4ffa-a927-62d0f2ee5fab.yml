@@ -1,0 +1,17 @@
+uuid: d3f86444-5512-4ffa-a927-62d0f2ee5fab
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.sdc.whitecross.card
+    - canvas.component.sdc.whitecross.card-icon
+    - canvas.component.sdc.whitecross.card-logo
+    - canvas.component.sdc.whitecross.card-pricing
+name: Card
+configEntityTypeId: component
+weight: 0
+items:
+  - sdc.whitecross.card
+  - sdc.whitecross.card-icon
+  - sdc.whitecross.card-logo
+  - sdc.whitecross.card-pricing

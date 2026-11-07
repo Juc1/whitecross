@@ -1,0 +1,9 @@
+uuid: 279dce98-dac7-4fe6-ad57-787422477fed
+langcode: en
+status: true
+dependencies: {  }
+name: Treatments
+vid: treatments
+description: null
+weight: 0
+new_revision: false

@@ -1,0 +1,26 @@
+uuid: 5cf23deb-3416-427c-8005-d344af7dcfd3
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.taxonomy_term_with_nodes
+  module:
+    - views
+active_version: 9724d8d09acc05f2
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_block:taxonomy_term_with_nodes-block_1'
+        label: 'Taxonomy term with nodes'
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+    fallback_metadata:
+      slot_definitions: null
+label: 'Taxonomy term with nodes'
+id: block.views_block.taxonomy_term_with_nodes-block_1
+provider: views
+source: block
+source_local_id: 'views_block:taxonomy_term_with_nodes-block_1'

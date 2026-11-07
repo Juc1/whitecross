@@ -1,0 +1,72 @@
+uuid: 74f136b9-19b3-4bea-892e-72e097ee203a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.treatment.field_faq
+    - field.field.node.treatment.field_image
+    - field.field.node.treatment.field_intro
+    - field.field.node.treatment.field_testimonials
+    - field.field.node.treatment.field_top_image_svg
+    - field.field.node.treatment.field_treatment_image
+    - node.type.treatment
+  module:
+    - image
+    - manage_display
+    - text
+id: node.treatment.default
+targetEntityType: node
+bundle: treatment
+mode: default
+content:
+  field_faq:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_intro:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_testimonials:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  title:
+    type: title
+    label: hidden
+    settings:
+      link_to_entity: false
+      tag: h1
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  created: true
+  field_top_image_svg: true
+  field_treatment_image: true
+  uid: true

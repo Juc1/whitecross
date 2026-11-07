@@ -1,0 +1,8 @@
+uuid: d97c1dfd-b00f-4c89-96f4-09b58519b4fc
+langcode: en
+status: true
+dependencies: {  }
+id: menu-main-menu-smartphone
+label: 'main menu smartphone'
+description: 'for smartphone'
+locked: false

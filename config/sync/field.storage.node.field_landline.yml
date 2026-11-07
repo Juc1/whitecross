@@ -1,0 +1,19 @@
+uuid: 577feab7-a783-4cad-9f8d-4b0ad6926c73
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.field_landline
+field_name: field_landline
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

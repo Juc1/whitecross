@@ -1,0 +1,21 @@
+uuid: e48e63ca-32d5-4c1a-9bad-cdde1106be17
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_faq
+    - node.type.treatment
+  module:
+    - text
+id: node.treatment.field_faq
+field_name: field_faq
+entity_type: node
+bundle: treatment
+label: 'Q & A'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

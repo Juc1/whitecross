@@ -1,0 +1,23 @@
+uuid: 22f167ba-d5c8-4ace-bc51-1a83c0266170
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:6af7a026-e18a-4e0b-b9f8-bf86003a4926'
+  module:
+    - block_content
+  theme:
+    - whitecross
+id: xmassvg
+theme: whitecross
+region: content
+weight: 11
+provider: null
+plugin: 'block_content:6af7a026-e18a-4e0b-b9f8-bf86003a4926'
+settings:
+  id: 'block_content:6af7a026-e18a-4e0b-b9f8-bf86003a4926'
+  label: 'xmas svg'
+  label_display: '0'
+  provider: block_content
+  view_mode: full
+visibility: {  }

@@ -1,0 +1,23 @@
+uuid: cc96cefe-5ce5-43f9-a853-8c709cbd2aa3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_insta
+    - node.type.practitioner
+  module:
+    - link
+id: node.practitioner.field_insta
+field_name: field_insta
+entity_type: node
+bundle: practitioner
+label: Insta
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

@@ -1,0 +1,9 @@
+uuid: aca0b344-7230-4211-8a28-afa646e99a3a
+langcode: en
+status: true
+dependencies: {  }
+id: treatment_prices
+label: 'Treatment Prices'
+icon_uuid: null
+description: 'left / right'
+behavior_plugins: {  }

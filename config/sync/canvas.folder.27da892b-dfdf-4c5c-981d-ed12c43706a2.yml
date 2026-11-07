@@ -1,0 +1,19 @@
+uuid: 27da892b-dfdf-4c5c-981d-ed12c43706a2
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.sdc.whitecross.accordion-container
+    - canvas.component.sdc.whitecross.footer
+    - canvas.component.sdc.whitecross.group
+    - canvas.component.sdc.whitecross.navbar
+    - canvas.component.sdc.whitecross.page-wrapper
+name: Layout
+configEntityTypeId: component
+weight: 0
+items:
+  - sdc.whitecross.accordion-container
+  - sdc.whitecross.footer
+  - sdc.whitecross.group
+  - sdc.whitecross.navbar
+  - sdc.whitecross.page-wrapper

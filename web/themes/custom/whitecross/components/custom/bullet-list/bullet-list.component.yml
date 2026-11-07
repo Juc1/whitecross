@@ -1,0 +1,25 @@
+"$schema": "https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json"
+name: Bullet List
+group: Custom
+description: A custom list component that uses a custom feather image for list items.
+props:
+  type: object
+  required:
+    - text
+  properties:
+    text:
+      type: string
+      title: List Content
+      contentMediaType: text/html
+      x-formatting-context: block
+      default: "<ul>
+        <li>First item</li>
+        <li>Second item</li>
+        <li>Third item</li>
+        </ul>"
+      examples:
+        - "<ul>
+          <li>First item</li>
+          <li>Second item</li>
+          <li>Third item</li>
+          </ul>"

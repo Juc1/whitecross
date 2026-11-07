@@ -1,0 +1,26 @@
+uuid: eea82fd0-db14-4397-8046-77e4d9cf3ee0
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.clinic
+  module:
+    - views
+active_version: 1ca10876fac4dbef
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_block:clinic-block_1'
+        label: Clinic
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+    fallback_metadata:
+      slot_definitions: null
+label: Clinic
+id: block.views_block.clinic-block_1
+provider: views
+source: block
+source_local_id: 'views_block:clinic-block_1'

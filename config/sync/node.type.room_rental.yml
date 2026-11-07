@@ -1,0 +1,26 @@
+uuid: 14c8b427-63bf-4138-af2f-73ab950489b7
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - type_tray
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+  type_tray:
+    type_category: _none
+    type_thumbnail: ''
+    type_icon: ''
+    type_description: ''
+    existing_nodes_link_text: ''
+    type_weight: 0
+name: 'Room Rental'
+type: room_rental
+description: 'mainly for images carousel'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true

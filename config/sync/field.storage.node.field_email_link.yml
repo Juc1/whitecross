@@ -1,0 +1,19 @@
+uuid: c19a4c9c-eb21-4529-8c60-6fe4ca45bc3f
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.field_email_link
+field_name: field_email_link
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

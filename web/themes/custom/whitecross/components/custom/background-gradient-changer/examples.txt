@@ -1,0 +1,45 @@
+This component is styled using default Tailwind CSS classes defined directly
+in its Twig template. You can easily override these defaults by passing
+new utility classes via the `attributes` object.
+
+Default Classes:
+`p-8 flex justify-center items-center text-white [text-shadow:1px_1px_2px_rgba(0,0,0,0.5)]`
+
+----------------------------------------------------------------------
+
+{# Example 1: Basic usage with default styles. #}
+{# The component will be centered and have padding, etc., automatically. #}
+
+{% include 'radley:background-gradient-changer' with {
+  content: 'Hello! I am using the default styles.'
+} only %}
+
+----------------------------------------------------------------------
+
+{# Example 2: Overriding a default style. #}
+{# Here, we override `items-center` to align the content to the bottom. #}
+
+{% embed 'radley:background-gradient-changer' with {
+  attributes: create_attribute().addClass('items-end'),
+  gradient1: 'linear-gradient(to right, #2F4F4F, #FF8C00)',
+  gradient2: 'linear-gradient(to right, #FF8C00, #BDB76B)',
+  gradient3: 'linear-gradient(to right, #BDB76B, #2F4F4F)'
+} %}
+  {% block children %}
+    <div class="text-center">
+      <h2>Content Aligned to the Bottom</h2>
+      <p>We overrode the default `items-center` class.</p>
+    </div>
+  {% endblock %}
+{% endembed %}
+
+----------------------------------------------------------------------
+
+{# Example 3: Passing different gradients and simple content. #}
+
+{% include 'radley:background-gradient-changer' with {
+  content: 'Using different gradients!',
+  gradient1: 'linear-gradient(to right, #C71585, #48D1CC)',
+  gradient2: 'linear-gradient(to right, #48D1CC, #FFD700)',
+  gradient3: 'linear-gradient(to right, #FFD700, #C71585)'
+} only %}

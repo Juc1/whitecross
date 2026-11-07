@@ -1,0 +1,72 @@
+uuid: 5299ce2a-9dce-4ae7-8c06-0dae4eff2f68
+langcode: en
+status: true
+dependencies: {  }
+id: breakpoints101123
+label: 'Breakpoints 101123'
+description: ''
+breakpoint: false
+swiper_options:
+  source: remote
+  autoHeight: false
+  width: null
+  height: null
+  observer: false
+  updateOnWindowResize: true
+  resizeObserver: true
+  direction: horizontal
+  effect: slide
+  loop: true
+  rewind: false
+  centeredSlides: true
+  speed: 300
+  slidesPerView: 1.0
+  spaceBetween: 0
+  slidesPerGroup: 1
+  loopedSlides: null
+  noSwipingSelector: '.no-swipe, button, input'
+  mousewheel: false
+  grabCursor: true
+  simulateTouch: true
+  allowTouchMove: true
+  cssMode: false
+  grid:
+    enabled: false
+    rows: 1
+    fill: column
+  keyboard:
+    enabled: false
+    onlyInViewport: true
+    pageUpDown: true
+  autoplay:
+    enabled: true
+    delay: 4000
+    disableOnInteraction: true
+    pauseOnMouseEnter: false
+    reverseDirection: false
+    stopOnLastSlide: false
+    waitForTransition: true
+  navigation:
+    enabled: true
+    hideOnClick: false
+  pagination:
+    enabled: true
+  scrollbar:
+    enabled: false
+    draggable: false
+    dragSize: auto
+    hide: true
+    snapOnRelease: false
+  zoom:
+    enabled: false
+    limitToOriginalSize: false
+    maxRatio: 3
+    minRatio: 1
+    panOnMouseMove: false
+    toggle: true
+  breakpoints:
+    breakpoint: null
+    swiper_template: null
+    weight: 0
+  lazy:
+    enabled: false

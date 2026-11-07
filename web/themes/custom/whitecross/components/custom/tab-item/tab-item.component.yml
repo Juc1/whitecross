@@ -1,0 +1,39 @@
+name: Tab Item
+group: Custom
+props:
+  type: object
+  properties:
+    title:
+      type: string
+      title: Tab Title
+      examples:
+        - "Tab Title"
+    background_color:
+      type: string
+      title: Tab title background color
+      enum:
+        - default
+        - radley-blue
+        - pink
+        - radley-purple
+        - radley-red
+        - primary
+        - secondary
+        - accent
+        - muted
+      meta:enum:
+        default: "Inherit"
+        radley-blue: "Radley Blue"
+        pink: "Pink (#ecc4c7)"
+        radley-purple: "Radley Purple"
+        radley-red: "Radley Red"
+        primary: "Primary"
+        secondary: "Secondary"
+        accent: "Accent"
+        muted: "Muted"
+      default: default
+      examples:
+        - default
+slots:
+  content:
+    title: Tab Content

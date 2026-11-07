@@ -1,0 +1,19 @@
+uuid: 787118ed-d291-414e-b6f2-867133b40c2f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_treatment_left_
+    - paragraphs.paragraphs_type._treatments_prices_5
+id: paragraph._treatments_prices_5.field_treatment_left_
+field_name: field_treatment_left_
+entity_type: paragraph
+bundle: _treatments_prices_5
+label: 'Treatment (Left)'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

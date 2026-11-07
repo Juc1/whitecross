@@ -1,0 +1,21 @@
+uuid: 16f1a42e-3862-495d-bad7-29395bb7222f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_face_svg
+    - node.type.practitioner
+  module:
+    - text
+id: node.practitioner.field_face_svg
+field_name: field_face_svg
+entity_type: node
+bundle: practitioner
+label: 'Face svg'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

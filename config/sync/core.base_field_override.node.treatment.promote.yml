@@ -1,0 +1,22 @@
+uuid: e072108f-ac33-44ec-9193-dedc3505542a
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.treatment
+id: node.treatment.promote
+field_name: promote
+entity_type: node
+bundle: treatment
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

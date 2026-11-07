@@ -1,0 +1,22 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Scrolling Video
+group: Base
+status: stable
+props:
+  type: object
+  required:
+    - media
+  properties:
+    media:
+      $ref: json-schema-definitions://canvas.module/video
+      title: Background Video
+      type: object
+      examples:
+        - src: "sites/default/files/videos/water.mp4"
+slots:
+  scrolling_video_slot:
+    title: Content
+
+libraryOverrides:
+  js:
+    scrolling-video.js: { attributes: { type: module } }

@@ -1,0 +1,81 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Text
+group: Base
+props:
+  type: object
+  required:
+    - text_color
+    - text_size
+  properties:
+    text:
+      type: string
+      title: Rich text
+      contentMediaType: text/html
+      x-formatting-context: block
+      examples:
+        - <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tristique pretium pellentesque semper enim aliquam.</p>
+    text_size:
+      type: string
+      title: Text size
+      enum:
+        - text-xs
+        - text-sm
+        - normal
+        - text-lg
+        - text-xl
+        - text-2xl
+        - text-3xl
+        - text-4xl
+        - text-5xl
+        - text-6xl
+        - text-7xl
+      meta:enum:
+        text-xs: Extra Small (XS)
+        text-sm: Small (S)
+        normal: Medium (Default)
+        text-lg: Large (L)
+        text-xl: Extra Large (XL)
+        text-2xl: 2X Large (2XL)
+        text-3xl: 3X Large (3XL)
+        text-4xl: 4X Large (4XL)
+        text-5xl: 5X Large (5XL)
+        text-6xl: 6X Large (6XL)
+        text-7xl: 7X Large (7XL)
+      examples:
+        - normal
+    line_height:
+      type: string
+      title: Line height
+      enum:
+        - default
+        - none
+        - tight
+        - snug
+        - normal
+        - relaxed
+        - loose
+      meta:enum:
+        default: Default (from font size)
+        none: None (1)
+        tight: Tight (1.25)
+        snug: Snug (1.375)
+        normal: Normal (1.5)
+        relaxed: Relaxed (1.625)
+        loose: Loose (2)
+      default: default
+      examples:
+        - default
+    text_color:
+      type: string
+      title: Text color
+      enum:
+        - default
+        - inverted
+        - primary
+      meta:enum:
+        default: Default text
+        inverted: Inverted text
+        primary: Primary
+      default: default
+      examples:
+        - default

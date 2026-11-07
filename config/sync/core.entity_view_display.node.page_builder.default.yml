@@ -1,0 +1,40 @@
+uuid: bd562bf1-8411-448d-a072-0f6bb4b51b4d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.page_builder.body
+    - node.type.page_builder
+  module:
+    - manage_display
+    - text
+id: node.page_builder.default
+targetEntityType: node
+bundle: page_builder
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  title:
+    type: title
+    label: hidden
+    settings:
+      link_to_entity: true
+      tag: h2
+    third_party_settings: {  }
+    weight: -49
+    region: content
+hidden:
+  created: true
+  layout_builder__layout: true
+  uid: true

@@ -1,0 +1,26 @@
+uuid: 1e56f0fa-22a0-4ba4-8cca-e56809ec8c67
+langcode: en
+status: false
+dependencies:
+  config:
+    - views.view.practitioners
+  module:
+    - views
+active_version: d101c6b4384e20d7
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_block:practitioners-block_1'
+        label: Practitioners
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+    fallback_metadata:
+      slot_definitions: null
+label: Practitioners
+id: block.views_block.practitioners-block_1
+provider: views
+source: block
+source_local_id: 'views_block:practitioners-block_1'

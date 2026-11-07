@@ -1,0 +1,11 @@
+uuid: 62e7c1fb-44f1-4d8b-af75-580a8d0b4dfb
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.svg_grid
+label: 'SVG grid'
+description: 'used with grid view'
+targetEntityType: node
+cache: true

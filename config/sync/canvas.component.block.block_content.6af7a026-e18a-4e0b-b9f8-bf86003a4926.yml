@@ -1,0 +1,25 @@
+uuid: e2d24116-db3d-4350-915a-39dcd85f3cfd
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:6af7a026-e18a-4e0b-b9f8-bf86003a4926'
+  module:
+    - block_content
+active_version: 2bf11221052918cb
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'block_content:6af7a026-e18a-4e0b-b9f8-bf86003a4926'
+        label: 'xmas svg'
+        label_display: '0'
+        provider: block_content
+        view_mode: full
+    fallback_metadata:
+      slot_definitions: null
+label: 'xmas svg'
+id: block.block_content.6af7a026-e18a-4e0b-b9f8-bf86003a4926
+provider: block_content
+source: block
+source_local_id: 'block_content:6af7a026-e18a-4e0b-b9f8-bf86003a4926'

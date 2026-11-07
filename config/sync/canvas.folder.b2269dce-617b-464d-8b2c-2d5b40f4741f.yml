@@ -1,0 +1,21 @@
+uuid: b2269dce-617b-464d-8b2c-2d5b40f4741f
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.marker.page_content
+    - canvas.component.sdc.daisyui_sdc.theme_controller_circles
+    - canvas.component.sdc.navigation.message
+    - canvas.component.sdc.navigation.title
+    - canvas.component.sdc.olivero.teaser
+    - canvas.component.sdc.whitecross.background-gradient-changer
+name: Other
+configEntityTypeId: component
+weight: 0
+items:
+  - marker.page_content
+  - sdc.daisyui_sdc.theme_controller_circles
+  - sdc.navigation.message
+  - sdc.navigation.title
+  - sdc.olivero.teaser
+  - sdc.whitecross.background-gradient-changer

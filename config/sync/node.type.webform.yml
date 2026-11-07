@@ -1,0 +1,16 @@
+uuid: 69075a80-3f94-4c6f-b5c9-003f658363d3
+langcode: en
+status: true
+dependencies:
+  module:
+    - type_tray
+third_party_settings:
+  type_tray:
+    existing_nodes_link_text: 'View existing <em class="placeholder">Webform</em> content'
+name: Webform
+type: webform
+description: 'Create a new form or questionnaire accessible to users. Submission results and statistics are recorded and accessible to privileged users.'
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: true

@@ -1,0 +1,41 @@
+uuid: 6e3ce774-c375-4eeb-8c4c-4b057238d393
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.admin.body
+    - field.field.node.admin.comment_node_admin
+    - node.type.admin
+  module:
+    - text
+id: node.admin.teaser
+targetEntityType: node
+bundle: admin
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 101
+    region: content
+hidden:
+  comment_node_admin: true
+  created: true
+  uid: true

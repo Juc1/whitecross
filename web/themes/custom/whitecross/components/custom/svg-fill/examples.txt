@@ -1,0 +1,36 @@
+<div class="bg-base-200 min-h-screen pb-24">
+  {# Test SVG Fill SDC Component (ar-lotus-logo.svg in Radley Blue, Radley Red, and Radley Purple) #}
+  <div class="container mx-auto p-6 flex flex-col items-center justify-center gap-6 my-6 bg-white/30 backdrop-blur rounded-xl shadow-sm">
+    <div class="w-full text-center">
+      <p class="text-sm font-semibold mb-2 text-foreground">AR Lotus Logo — Fill: Radley Blue (Navbar Responsive)</p>
+      {% include 'byte_theme:svg-fill' with {
+        svg_path: 'sites/default/files/2026-08/ar-lotus-logo.svg',
+        fill_color: 'radley-blue',
+        height: 'navbar-responsive',
+        alignment: 'center',
+        url: '/'
+      } %}
+    </div>
+
+    <div class="w-full text-center">
+      <p class="text-sm font-semibold mb-2 text-foreground">AR Lotus Logo — Fill: Radley Red (Navbar Responsive)</p>
+      {% include 'byte_theme:svg-fill' with {
+        svg_path: 'sites/default/files/2026-08/ar-lotus-logo.svg',
+        fill_color: 'radley-red',
+        height: 'navbar-responsive',
+        alignment: 'center',
+        url: '/'
+      } %}
+    </div>
+
+    <div class="w-full text-center">
+      <p class="text-sm font-semibold mb-2 text-foreground">AR Lotus Logo — Fill: Radley Purple (Large / h-14)</p>
+      {% include 'byte_theme:svg-fill' with {
+        svg_path: 'sites/default/files/2026-08/ar-lotus-logo.svg',
+        fill_color: 'radley-purple',
+        height: 'h-14',
+        alignment: 'center',
+        url: '/'
+      } %}
+    </div>
+  </div>

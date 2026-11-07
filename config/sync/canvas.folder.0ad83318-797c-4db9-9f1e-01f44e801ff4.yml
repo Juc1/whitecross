@@ -1,0 +1,41 @@
+uuid: 0ad83318-797c-4db9-9f1e-01f44e801ff4
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.sdc.juc_sdc.box
+    - canvas.component.sdc.juc_sdc.grid
+    - canvas.component.sdc.juc_sdc.group
+    - canvas.component.sdc.juc_sdc.icon
+    - canvas.component.sdc.juc_sdc.section
+    - canvas.component.sdc.juc_sdc.wavesurfer
+    - canvas.component.sdc.whitecross.accordion
+    - canvas.component.sdc.whitecross.bullet-list
+    - canvas.component.sdc.whitecross.bullet-list-marker
+    - canvas.component.sdc.whitecross.bullet-list-svg
+    - canvas.component.sdc.whitecross.card-slot
+    - canvas.component.sdc.whitecross.card-text
+    - canvas.component.sdc.whitecross.icon-text
+    - canvas.component.sdc.whitecross.svg-fill
+    - canvas.component.sdc.whitecross.tab-item
+    - canvas.component.sdc.whitecross.tabs
+name: Custom
+configEntityTypeId: component
+weight: 0
+items:
+  - sdc.juc_sdc.box
+  - sdc.juc_sdc.grid
+  - sdc.juc_sdc.group
+  - sdc.juc_sdc.icon
+  - sdc.juc_sdc.section
+  - sdc.juc_sdc.wavesurfer
+  - sdc.whitecross.accordion
+  - sdc.whitecross.bullet-list
+  - sdc.whitecross.bullet-list-marker
+  - sdc.whitecross.bullet-list-svg
+  - sdc.whitecross.card-slot
+  - sdc.whitecross.card-text
+  - sdc.whitecross.icon-text
+  - sdc.whitecross.svg-fill
+  - sdc.whitecross.tab-item
+  - sdc.whitecross.tabs

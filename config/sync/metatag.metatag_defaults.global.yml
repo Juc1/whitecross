@@ -1,0 +1,12 @@
+uuid: e8a926a1-a03a-46b1-9971-00f5248bbf58
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: sL588ui1E_8-2c_UupwyYxcqX2OVyMFp3HTLbbFqvPc
+id: global
+label: Global
+tags:
+  description: 'Award winning Holistic Health and Skin Clinic in central London. Treatments include facial aesthetics, massage, colonic hydrotherapy.'
+  canonical_url: '[current-page:url]'
+  title: '[current-page:title] | [site:name]'

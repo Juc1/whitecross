@@ -1,0 +1,41 @@
+uuid: b072d2d7-4803-4ee5-a749-23342be03cd9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.video.field_media_video_file
+    - media.type.video
+  module:
+    - file
+    - media
+    - media_library
+  theme:
+    - whitecross
+active_version: b7a4d84a50d511f9
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        media:
+          required: true
+          field_type: entity_reference
+          field_storage_settings:
+            target_type: media
+          field_instance_settings:
+            handler: 'default:media'
+            handler_settings:
+              target_bundles:
+                video: video
+          field_widget: media_library_widget
+          default_value: {  }
+          expression: 'ℹ︎entity_reference␟entity␜␜entity:media:video␝field_media_video_file␞␟{src↝entity␜␜entity:file␝uri␞␟url}'
+          derived_schema_metadata: {  }
+    fallback_metadata:
+      slot_definitions:
+        scrolling_video_slot:
+          title: Content
+label: 'Scrolling Video'
+id: sdc.whitecross.scrolling-video
+provider: whitecross
+source: sdc
+source_local_id: 'whitecross:scrolling-video'

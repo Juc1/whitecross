@@ -1,0 +1,83 @@
+uuid: 47e1b8e3-2c85-4536-88cd-d4fc88275698
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.article
+    - node.type.blog_post
+    - node.type.newsletter
+    - node.type.page
+    - node.type.practitioner
+    - node.type.testimonial
+    - node.type.treatment
+    - node.type.video
+  module:
+    - file
+    - help
+    - node
+    - path
+    - shortcut
+    - system
+    - toolbar
+id: editor
+label: editor
+weight: 2
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'access content'
+  - 'access content overview'
+  - 'access help pages'
+  - 'access toolbar'
+  - 'administer shortcuts'
+  - 'bypass node access'
+  - 'create article content'
+  - 'create blog_post content'
+  - 'create newsletter content'
+  - 'create page content'
+  - 'create practitioner content'
+  - 'create treatment content'
+  - 'create url aliases'
+  - 'customize shortcut links'
+  - 'delete any article content'
+  - 'delete any blog_post content'
+  - 'delete any newsletter content'
+  - 'delete any page content'
+  - 'delete any practitioner content'
+  - 'delete any testimonial content'
+  - 'delete any treatment content'
+  - 'delete own blog_post content'
+  - 'delete own files'
+  - 'delete own newsletter content'
+  - 'delete own page content'
+  - 'delete own practitioner content'
+  - 'delete own testimonial content'
+  - 'delete own treatment content'
+  - 'delete own video content'
+  - 'edit any article content'
+  - 'edit any blog_post content'
+  - 'edit any newsletter content'
+  - 'edit any page content'
+  - 'edit any practitioner content'
+  - 'edit any testimonial content'
+  - 'edit own article content'
+  - 'edit own blog_post content'
+  - 'edit own newsletter content'
+  - 'edit own page content'
+  - 'edit own practitioner content'
+  - 'edit own testimonial content'
+  - 'edit own treatment content'
+  - 'revert article revisions'
+  - 'revert blog_post revisions'
+  - 'revert page revisions'
+  - 'revert practitioner revisions'
+  - 'revert testimonial revisions'
+  - 'revert treatment revisions'
+  - 'switch shortcut sets'
+  - 'view article revisions'
+  - 'view blog_post revisions'
+  - 'view page revisions'
+  - 'view practitioner revisions'
+  - 'view testimonial revisions'
+  - 'view the administration theme'
+  - 'view treatment revisions'

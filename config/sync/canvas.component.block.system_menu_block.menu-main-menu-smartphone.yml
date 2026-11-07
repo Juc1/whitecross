@@ -1,0 +1,27 @@
+uuid: 113d8886-1859-4f18-bcf0-f06b259af59a
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.menu-main-menu-smartphone
+  module:
+    - system
+active_version: cb98e674969155b8
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'system_menu_block:menu-main-menu-smartphone'
+        label: 'main menu smartphone'
+        label_display: '0'
+        provider: system
+        level: 1
+        depth: null
+        expand_all_items: false
+    fallback_metadata:
+      slot_definitions: null
+label: 'main menu smartphone'
+id: block.system_menu_block.menu-main-menu-smartphone
+provider: system
+source: block
+source_local_id: 'system_menu_block:menu-main-menu-smartphone'

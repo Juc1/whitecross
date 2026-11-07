@@ -1,0 +1,20 @@
+name: "Whitecross"
+type: theme
+"base theme": false
+libraries:
+  - whitecross/global
+logo: byte-logo.svg
+description: "Starter theme with Tailwind CSS v4, DaisyUI v5, and SDCs for Drupal 11 & Canvas."
+core_version_requirement: ^11.3
+regions:
+  content: Content
+  header: Header
+  footer: Footer
+dependencies:
+  - "canvas:canvas"
+  - "cva:cva"
+
+# Information added by Drupal.org packaging script on 2026-03-19
+version: "1.0.2"
+project: "radley"
+datestamp: 1773939327

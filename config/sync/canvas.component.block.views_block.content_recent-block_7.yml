@@ -1,0 +1,26 @@
+uuid: d063ad67-f01b-4886-8cb5-3a9a940d2816
+langcode: en
+status: false
+dependencies:
+  config:
+    - views.view.content_recent
+  module:
+    - views
+active_version: 2c5b49258421b601
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_block:content_recent-block_7'
+        label: 'Recent content: Testimonials edit'
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+    fallback_metadata:
+      slot_definitions: null
+label: 'Recent content: Testimonials edit'
+id: block.views_block.content_recent-block_7
+provider: views
+source: block
+source_local_id: 'views_block:content_recent-block_7'

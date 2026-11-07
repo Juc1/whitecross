@@ -1,0 +1,14 @@
+uuid: 037a937d-df46-44b2-87a8-f672122f7d43
+langcode: en
+status: true
+dependencies: {  }
+name: practitioner_face
+label: practitioner-face
+effects:
+  0da1f51c-166d-448f-a6c3-7f235fded211:
+    uuid: 0da1f51c-166d-448f-a6c3-7f235fded211
+    id: image_resize
+    weight: 1
+    data:
+      width: 480
+      height: 360

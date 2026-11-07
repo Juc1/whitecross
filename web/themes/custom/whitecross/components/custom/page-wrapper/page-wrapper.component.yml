@@ -1,0 +1,31 @@
+$schema: "https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json"
+name: Page Wrapper
+description: "Top-level layout shell for page templates that sets the active page color theme (data-theme)."
+group: Layout
+status: stable
+props:
+  type: object
+  required:
+    - theme
+  properties:
+    theme:
+      type: string
+      title: "Page Color Theme"
+      description: "Sets the cascading color theme for the entire page template."
+      enum:
+        - default
+        - blue
+        - pink
+        - purple
+      meta:enum:
+        default: "Inherit / Default"
+        blue: "Radley Blue"
+        pink: "Pink"
+        purple: "Radley Purple"
+      default: pink
+      examples:
+        - pink
+slots:
+  content:
+    title: "Content"
+    description: "Page content, header, and regions."

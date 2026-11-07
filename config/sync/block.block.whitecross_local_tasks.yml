@@ -1,0 +1,22 @@
+uuid: 5e47a9dc-8255-470c-8c82-bf16ab33ed73
+langcode: en
+status: true
+dependencies:
+  theme:
+    - whitecross
+_core:
+  default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
+id: whitecross_local_tasks
+theme: whitecross
+region: content
+weight: -11
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {  }

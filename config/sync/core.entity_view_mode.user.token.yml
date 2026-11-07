@@ -1,0 +1,11 @@
+uuid: baca1feb-7f99-4d3d-a55d-5501ca55c8dd
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user.token
+label: Token
+description: ''
+targetEntityType: user
+cache: true

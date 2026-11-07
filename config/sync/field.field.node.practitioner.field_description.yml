@@ -1,0 +1,19 @@
+uuid: f87ddfe1-863d-40b6-80e9-a2d414c658f0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_description
+    - node.type.practitioner
+id: node.practitioner.field_description
+field_name: field_description
+entity_type: node
+bundle: practitioner
+label: Description
+description: "brief description of what this practitioner does - for example:\r\nSemi-Pemanent Make up - single line, goes under photo of practitioner's face on https://193whitecrossstreet.london/practitioners/\r\n"
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

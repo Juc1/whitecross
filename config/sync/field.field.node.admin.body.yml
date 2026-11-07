@@ -1,0 +1,23 @@
+uuid: cd35f20b-57c7-4603-992e-5cacd467d7c4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.admin
+  module:
+    - text
+id: node.admin.body
+field_name: body
+entity_type: node
+bundle: admin
+label: Body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

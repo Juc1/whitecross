@@ -1,0 +1,42 @@
+$schema: "https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json"
+name: Bullet List Marker
+group: Custom
+description: A list component that styles the native list marker using CSS variables for content, font size, and color.
+props:
+  type: object
+  required:
+    - text
+  properties:
+    text:
+      type: string
+      title: List Content
+      contentMediaType: text/html
+      x-formatting-context: block
+      default: "<ul>
+        <li>First item</li>
+        <li>Second item</li>
+        <li>Third item</li>
+        </ul>"
+      examples:
+        - "<ul>
+          <li>First item</li>
+          <li>Second item</li>
+          <li>Third item</li>
+          </ul>"
+    content:
+      type: string
+      title: Marker Character
+      default: "» "
+    font_size:
+      type: string
+      title: Marker Font Size
+      default: "1.5em"
+    color:
+      type: string
+      title: Marker Color
+      default: "red"
+    icon:
+      type: string
+      title: Phosphor Icon ID
+      description: Optional icon ID from Phosphor Icons library (e.g., "arrow-right", "check", "star").
+      default: ""

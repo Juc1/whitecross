@@ -1,0 +1,105 @@
+/**
+ * @file theme.css
+ * Global theme variables and typography for Radley Theme.
+ *
+ * NOTE: Color themes are now managed in dedicated DaisyUI 5 theme files
+ * located in cms/web/themes/custom/radley/src/themes/*.css (compiled into build/main.min.css).
+ * This file retains typography, layout metrics, shadows, and the backward-compatibility bridge.
+ */
+
+:root,
+[data-theme] {
+  /* ==========================================================================
+     Backward-Compatibility Bridge:
+     Maps legacy/shadcn variables to active DaisyUI theme tokens.
+     ========================================================================== */
+  --primary: var(--color-primary);
+  --primary-foreground: var(--color-primary-content);
+  --secondary: var(--color-secondary);
+  --secondary-foreground: var(--color-secondary-content);
+  --accent: var(--color-accent);
+  --accent-foreground: var(--color-accent-content);
+  --background: var(--color-base-100);
+  --foreground: var(--color-base-content);
+  --card: var(--color-base-100);
+  --card-foreground: var(--color-base-content);
+  --muted: var(--color-base-200);
+  --muted-foreground: oklch(0.40 0.03 260.329);
+  --destructive: var(--color-error);
+  --destructive-foreground: var(--color-error-content);
+  --border: var(--color-base-300);
+  --navbar-border: gainsboro;
+  --input: var(--color-base-300);
+
+  /* DaisyUI token fallbacks */
+  --base-100: var(--color-base-100);
+  --base-200: var(--color-base-200);
+  --base-300: var(--color-base-300);
+  --base-content: var(--color-base-content);
+}
+
+:root {
+  /* ==========================================================================
+     Brand Palette Constants
+     ========================================================================== */
+  --radley-blue: #a0bbdb;
+  --radley-blue-hover: #6EA7C3;
+  --radley-purple: #8e75ae;
+  --radley-purple-hover: #66559F;
+  --radley-red: #d182a0;
+  --radley-red-hover: #A3373C;
+  --pink: #ecc4c7;
+  --pink-hover: #e4abb0;
+  --radley-pink: #ecc4c7;
+  --footer-background: oklch(0.2533 0.0159 252.42);
+
+  /* ==========================================================================
+     Typography
+     ========================================================================== */
+  --font-sans: "Cormorant Garamond", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-mono: "Fira Mono", "Menlo", "Consolas", "Liberation Mono", monospace;
+
+  /* ==========================================================================
+     UI Geometry & Shadows
+     ========================================================================== */
+  --radius: 0.5rem;
+  --shadow-2xs: 0 1px 3px 0px hsl(0 0% 0% / 0.05);
+  --shadow-xs: 0 1px 3px 0px hsl(0 0% 0% / 0.05);
+  --shadow-sm: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 1px 2px -1px hsl(0 0% 0% / 0.1);
+  --shadow: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 1px 2px -1px hsl(0 0% 0% / 0.1);
+  --shadow-md: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 2px 4px -1px hsl(0 0% 0% / 0.1);
+  --shadow-lg: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 4px 6px -1px hsl(0 0% 0% / 0.1);
+  --shadow-xl: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 8px 10px -1px hsl(0 0% 0% / 0.1);
+  --shadow-2xl: 0 25px 50px -12px hsl(0 0% 0% / 0.25);
+
+  /* Set navbar height for hero billboard overlay */
+  --navbar-height: calc(var(--spacing, 4px) * 15);
+
+  @media (min-width: 768px) {
+    --navbar-height: calc(var(--spacing, 4px) * 18);
+  }
+}
+
+/* Headings typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Cormorant Garamond", serif;
+}
+
+.heading-responsive-5xl, 
+.heading-responsive-6xl {
+  line-height: 1.5;
+}
+
+.webform-type-select select {
+  color: black;
+}
+
+a {
+  text-decoration: underline;
+}
+
+/* menu, button sdc, and cards */
+ul li a, a.btn, .card a {
+  text-decoration: none;
+}

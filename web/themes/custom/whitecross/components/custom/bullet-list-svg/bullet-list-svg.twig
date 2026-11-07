@@ -1,0 +1,17 @@
+{% set list_wrapper =
+  html_cva(base: ['bullet-list-svg', 'font-normal', 'text-base md:text-lg xl:text-xl', 'text-foreground', '[&_ol]:list-decimal [&_ol]:pl-5'])
+%}
+
+{% set list_classes = list_wrapper.apply({}) %}
+
+{% set custom_style = '' %}
+{% if color is not empty %}
+  {% set custom_style = custom_style ~ '--bullet-color: ' ~ (color|escape('html_attr')) ~ '; ' %}
+{% endif %}
+
+{% set svg_path = bullet_svg_path|default('/themes/custom/whitecross/icons/phosphor/caret-right.svg') %}
+{% set custom_style = custom_style ~ "--bullet-mask-url: url('" ~ (svg_path|escape('html_attr')) ~ "'); " %}
+
+<div class="{{ list_classes }}" style="{{ custom_style|raw }}">
+  {{ text|raw }}
+</div>

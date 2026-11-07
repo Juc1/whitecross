@@ -1,0 +1,86 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Icon Text
+group: Custom
+description: "Displays an icon alongside text, perfect for contact info, addresses, phone numbers, and feature highlights."
+status: stable
+props:
+  type: object
+  required:
+    - icon
+    - text
+  properties:
+    icon:
+      type: string
+      title: Icon Name
+      description: "Identifier from the Phosphor icon library (e.g. 'map-pin', 'phone', 'envelope', 'clock', 'check', 'caret-right', 'star')."
+      default: "map-pin"
+      examples:
+        - "map-pin"
+        - "phone"
+        - "envelope"
+    text:
+      type: string
+      title: Text Content
+      description: "The text string to display (e.g. address, phone number, email)."
+      default: "193 Whitecross Street, London"
+      examples:
+        - "193 Whitecross Street, London"
+        - "020 7123 4567"
+        - "info@whitecross.com"
+    url:
+      type: string
+      title: Link URL (optional)
+      description: "Optional URL or protocol link (e.g. 'tel:02071234567', 'mailto:info@whitecross.com', or a web address)."
+      examples:
+        - "tel:02071234567"
+    icon_color:
+      type: string
+      title: Icon Color
+      description: "Color for the icon."
+      enum:
+        - primary
+        - secondary
+        - accent
+        - neutral
+        - inherit
+      default: primary
+      meta:enum:
+        primary: "Primary"
+        secondary: "Secondary"
+        accent: "Accent"
+        neutral: "Neutral"
+        inherit: "Current Text Color"
+      examples:
+        - primary
+    icon_size:
+      type: string
+      title: Icon Size
+      enum:
+        - extra-small
+        - small
+        - medium
+        - large
+      default: small
+      meta:enum:
+        extra-small: "Extra Small (20px)"
+        small: "Small (24px)"
+        medium: "Medium (32px)"
+        large: "Large (48px)"
+      examples:
+        - small
+    text_size:
+      type: string
+      title: Text Size
+      enum:
+        - text-sm
+        - normal
+        - text-lg
+        - text-xl
+      default: normal
+      meta:enum:
+        text-sm: "Small"
+        normal: "Normal (Default)"
+        text-lg: "Large"
+        text-xl: "Extra Large"
+      examples:
+        - normal

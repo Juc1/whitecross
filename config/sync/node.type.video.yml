@@ -1,0 +1,21 @@
+uuid: 119c439f-0f29-462c-bed5-f62717166f02
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - type_tray
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main-menu
+    parent: 'main-menu:0:'
+  type_tray:
+    existing_nodes_link_text: 'View existing <em class="placeholder">Video</em> content'
+name: Video
+type: video
+description: null
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: true

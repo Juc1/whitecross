@@ -1,0 +1,29 @@
+{# Attach the Cormorant Garamond Google Font library #}
+{{ attach_library('whitecross/cormorant-garamond') }}
+
+{# Extract background image src from the Canvas media object, fallback to default if empty #}
+{% set bg_image = media.src|default('sites/default/files/images/water-tree.jpg') %}
+
+{# Ensure it has a leading slash for a valid relative path if not absolute #}
+{% if bg_image starts with '/' or bg_image starts with 'http' %}
+  {% set bg_image_url = bg_image %}
+{% else %}
+  {% set bg_image_url = '/' ~ bg_image %}
+{% endif %}
+
+<div class="scrolling-image relative overflow-hidden" style="clip-path: inset(0 0 0 0);">
+  <div
+    class="scrolling-image--bg pointer-events-none fixed inset-0 bg-cover bg-center bg-no-repeat"
+    style="background-image: url('{{ bg_image_url }}');"
+  ></div>
+  <div class="scrolling-image--content relative z-10 flex justify-center py-[28vh]">
+    <div
+      class="@container w-full px-4 text-center text-4xl leading-relaxed text-white md:w-1/2 md:px-0 md:text-5xl"
+      style="font-family: 'Cormorant Garamond', Georgia, serif;"
+    >
+      {% block scrolling_image_slot %}
+        {{ scrolling_image_slot }}
+      {% endblock %}
+    </div>
+  </div>
+</div>

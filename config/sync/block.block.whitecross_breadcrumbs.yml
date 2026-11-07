@@ -1,0 +1,22 @@
+uuid: f0768ae5-2cab-42e8-833b-7240c7bd6f03
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - whitecross
+_core:
+  default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
+id: whitecross_breadcrumbs
+theme: whitecross
+region: content
+weight: -1
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }

@@ -1,0 +1,25 @@
+uuid: b60e7ff7-555b-4cf8-b4fa-1703880db4a1
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - type_tray
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+  type_tray:
+    type_category: _none
+    type_thumbnail: ''
+    type_icon: /themes/whitecross/images/type-tray/heart.svg
+    type_description: ''
+    existing_nodes_link_text: 'View existing <em class="placeholder">Testimonial</em> content'
+    type_weight: 0
+name: Testimonial
+type: testimonial
+description: 'Single testimonial that will appear in a list of testimonials'
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: true

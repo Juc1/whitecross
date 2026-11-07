@@ -1,0 +1,43 @@
+{{ attach_library('whitecross/background-gradient-changer') }}
+{#
+/**
+ * @file
+ * Template for the background-gradient-changer component.
+ *
+ * Available variables:
+ * - gradient1: The starting gradient.
+ * - gradient2: The second gradient.
+ * - gradient3: The third gradient.
+ * - content: Simple text content.
+ * - children: Slotted content.
+ */
+#}
+{#
+  Default base classes are applied below. You can override these
+  by passing utility classes via the 'attributes' object.
+  e.g., .addClass('items-start') to align content to the top.
+#}
+<div
+  {{
+  attributes.addClass(
+    'background-gradient-changer',
+    'flex',
+    'justify-center',
+    'items-center',
+    'text-white',
+    '[text-shadow:1px_1px_2px_rgba(0,0,0,0.5)]'
+  )
+  }}
+  style="background: {{ gradient1 }};"
+  data-gradient1="{{ gradient1 }}"
+  data-gradient2="{{ gradient2 }}"
+  data-gradient3="{{ gradient3 }}"
+>
+  {% block children %}
+    {% if content %}
+      {{ content }}
+    {% else %}
+      {{ children }}
+    {% endif %}
+  {% endblock %}
+</div>

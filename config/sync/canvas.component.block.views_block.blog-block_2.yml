@@ -1,0 +1,26 @@
+uuid: 68d8e2ae-bd89-48b3-9c7f-5b4a3bb560c7
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.blog
+  module:
+    - views
+active_version: 0929f15fc587905a
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_block:blog-block_2'
+        label: 'Blog: Blog UL'
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+    fallback_metadata:
+      slot_definitions: null
+label: 'Blog: Blog UL'
+id: block.views_block.blog-block_2
+provider: views
+source: block
+source_local_id: 'views_block:blog-block_2'

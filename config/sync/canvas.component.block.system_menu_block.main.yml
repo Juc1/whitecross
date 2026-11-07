@@ -1,0 +1,27 @@
+uuid: 05ec49b8-0a2a-484d-842c-fe075c8070c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+active_version: 4ecb09e0e0a925fa
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'system_menu_block:main'
+        label: 'Main menu'
+        label_display: '0'
+        provider: system
+        level: 1
+        depth: null
+        expand_all_items: false
+    fallback_metadata:
+      slot_definitions: null
+label: 'Main menu'
+id: block.system_menu_block.main
+provider: system
+source: block
+source_local_id: 'system_menu_block:main'

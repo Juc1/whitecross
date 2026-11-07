@@ -1,0 +1,151 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Image
+group: Base
+props:
+  type: object
+  properties:
+    media:
+      $ref: json-schema-definitions://canvas.module/image
+      title: Image
+      type: object
+      examples:
+        - src: "assets/pexels-felix-mittermeier-1209650.jpg"
+          alt: "Photo by Felix Mittermeier: https://www.pexels.com/photo/atmospheric-evening-bavaria-beautiful-clouds-1209650/"
+          width: 1920
+          height: 1014
+    size:
+      title: Aspect ratio
+      type: string
+      enum:
+        - auto
+        - "2:1"
+        - 16:9
+        - 3:2
+        - 4:3
+        - 1:1
+        - "4:5"
+        - "2:3"
+      meta:enum:
+        auto: Original (Auto)
+        2:1: "2×1"
+        16:9: "16×9"
+        3:2: "3×2"
+        4:3: "4×3"
+        1:1: Square
+        4:5: "4×5"
+        2:3: "2×3"
+      default: "auto"
+      examples:
+        - "auto"
+    radius:
+      type: string
+      title: Corner radius
+      enum:
+        - small
+        - large
+        - extra-large
+      meta:enum:
+        small: Small
+        large: Large
+        extra-large: Extra large
+      examples:
+        - "small"
+    caption:
+      title: Caption
+      type: string
+    url:
+      type: string
+      title: Link
+    # Detailed Comment: Style property added to allow framed vs full-width rendering options, matching components/card behavior
+    style:
+      type: string
+      title: Style
+      enum:
+        - none
+        - full
+        - framed
+        - shadow-xl
+        - shadow-2xl
+      meta:enum:
+        none: None (Default)
+        framed: Framed
+        shadow-xl: Shadow XL
+        shadow-2xl: Shadow 2XL
+      default: none
+      examples:
+        - none
+    # Detailed Comment: Background color property added to allow framed images to have primary, secondary, accent, or inverted background colors
+    background:
+      type: string
+      title: Background color
+      enum:
+        - default
+        - accent
+        - primary
+        - inverted
+        - noColor
+      meta:enum:
+        default: Default
+        accent: Accent
+        primary: Primary
+        inverted: Inverted
+        noColor: No Background
+      default: noColor
+      examples:
+        - noColor
+    padding:
+      type: string
+      title: Padding
+      enum:
+        - none
+        - p-1
+        - p-2
+        - p-3
+        - p-4
+        - p-5
+      meta:enum:
+        none: None
+        p-1: Padding 1
+        p-2: Padding 2
+        p-3: Padding 3
+        p-4: Padding 4
+        p-5: Padding 5
+      default: none
+      examples:
+        - none
+    background_color:
+      type: string
+      title: Background color (Custom)
+      enum:
+        - none
+        - white
+        - slate-50
+        - stone-50
+        - slate-100
+        - slate-200
+      meta:enum:
+        none: None
+        white: White
+        slate-50: Slate 50
+        stone-50: Stone 50
+        slate-100: Slate 100
+        slate-200: Slate 200
+      default: none
+      examples:
+        - none
+    border:
+      type: string
+      title: Border width
+      enum:
+        - none
+        - border
+        - border-2
+        - border-4
+      meta:enum:
+        none: None
+        border: Thin (1px)
+        border-2: Medium (2px)
+        border-4: Thick (4px)
+      default: none
+      examples:
+        - none

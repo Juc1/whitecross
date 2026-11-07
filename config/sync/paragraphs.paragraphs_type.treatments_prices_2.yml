@@ -1,0 +1,9 @@
+uuid: 8da680aa-dfcb-4022-960c-6d25fb77f84f
+langcode: en
+status: true
+dependencies: {  }
+id: treatments_prices_2
+label: 'Treatments Prices 2'
+icon_uuid: null
+description: 'If required eg Adults / children'
+behavior_plugins: {  }

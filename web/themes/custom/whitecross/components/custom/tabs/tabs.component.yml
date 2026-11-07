@@ -1,0 +1,8 @@
+name: Tabs
+group: Custom
+slots:
+  tab_items:
+    title: Tabs
+libraryOverrides:
+  js:
+    tabs.js: { attributes: { type: module } }

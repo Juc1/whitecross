@@ -1,0 +1,19 @@
+uuid: 918d34c1-f7c6-4eb5-b929-e432fec03d96
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.field_insta
+field_name: field_insta
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

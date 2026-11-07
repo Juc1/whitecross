@@ -1,0 +1,35 @@
+{# Attach the Cormorant Garamond Google Font library #}
+{{ attach_library('whitecross/cormorant-garamond') }}
+
+{# Extract background video src from the Canvas media object, fallback to default if empty #}
+{% set bg_video = media.src|default('sites/default/files/videos/water.mp4') %}
+
+{# Ensure it has a leading slash for a valid relative path if not absolute #}
+{% if bg_video starts with '/' or bg_video starts with 'http' %}
+  {% set bg_video_url = bg_video %}
+{% else %}
+  {% set bg_video_url = '/' ~ bg_video %}
+{% endif %}
+
+<div class="scrolling-video relative overflow-hidden" style="clip-path: inset(0 0 0 0);">
+  <video
+    autoplay
+    muted
+    loop
+    playsinline
+    class="scrolling-video--bg pointer-events-none fixed inset-0 h-full w-full object-cover"
+    src="{{ bg_video_url }}"
+  >
+    Your browser does not support the video tag.
+  </video>
+  <div class="scrolling-video--content relative z-10 flex justify-center py-[28vh]">
+    <div
+      class="w-full px-4 text-center text-4xl leading-relaxed text-white md:w-1/2 md:px-0 md:text-5xl"
+      style="font-family: 'Cormorant Garamond', Georgia, serif;"
+    >
+      {% block scrolling_video_slot %}
+        {{ scrolling_video_slot }}
+      {% endblock %}
+    </div>
+  </div>
+</div>

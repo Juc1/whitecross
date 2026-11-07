@@ -1,0 +1,26 @@
+uuid: 55ba02fa-61b5-4934-a111-4c3acf762561
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.treatments
+  module:
+    - views
+active_version: cec12cf1709bc39b
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_block:treatments-block_4'
+        label: 'Treatments: SVG grid view mode'
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+    fallback_metadata:
+      slot_definitions: null
+label: 'Treatments: SVG grid view mode'
+id: block.views_block.treatments-block_4
+provider: views
+source: block
+source_local_id: 'views_block:treatments-block_4'

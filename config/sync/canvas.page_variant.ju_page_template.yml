@@ -1,0 +1,276 @@
+uuid: 14c09738-0593-440a-9e78-b494cb46c737
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.block.system_menu_block.main
+    - canvas.component.marker.page_content
+    - canvas.component.sdc.daisyui_sdc.daisy-button
+    - canvas.component.sdc.juc_sdc.group
+    - canvas.component.sdc.juc_sdc.section
+    - canvas.component.sdc.whitecross.group
+    - canvas.component.sdc.whitecross.image
+    - canvas.component.sdc.whitecross.navbar
+    - canvas.component.sdc.whitecross.text
+    - field.field.media.image.field_media_image
+    - filter.format.canvas_html_block
+    - image.style.canvas_parametrized_width
+    - media.type.image
+  content:
+    - 'file:file:681bc245-843a-4cda-ad8c-2d03180f1674'
+    - 'media:image:0a5a46a2-5481-4cb5-a470-faf08e9345d9'
+  module:
+    - file
+    - link
+    - media
+    - options
+    - text
+id: ju_page_template
+label: 'ju page template'
+description: ''
+component_tree:
+  a9d3e39f-3c00-4ffa-8795-49ae0d2e8515:
+    uuid: a9d3e39f-3c00-4ffa-8795-49ae0d2e8515
+    component_id: sdc.whitecross.navbar
+    component_version: 15d46685b4985e53
+    inputs:
+      menu_align: right
+  140a3a5c-506a-403b-81ed-789c29112417:
+    parent_uuid: a9d3e39f-3c00-4ffa-8795-49ae0d2e8515
+    slot: navigation
+    uuid: 140a3a5c-506a-403b-81ed-789c29112417
+    component_id: block.system_menu_block.main
+    component_version: 4ecb09e0e0a925fa
+    inputs:
+      label: 'Main menu'
+      label_display: '0'
+      level: 1
+      depth: null
+      expand_all_items: true
+  6bc41d21-4689-4195-9130-fe26e3f40626:
+    uuid: 6bc41d21-4689-4195-9130-fe26e3f40626
+    component_id: sdc.juc_sdc.section
+    component_version: b44fffccb901691d
+    inputs:
+      width: 100%
+      columns: 50-50
+      mobile_columns: '1'
+      margin_block_start: '48'
+      margin_block_end: '48'
+      padding_block_start: '0'
+      padding_block_end: '0'
+      padding_left: '0'
+      inner_spacing: small
+      theme: default
+      background_color: default
+      section_header: true
+      section_footer: true
+      full_width_background: true
+  c881a944-6e30-4466-9e46-dfe37f391102:
+    parent_uuid: 6bc41d21-4689-4195-9130-fe26e3f40626
+    slot: header_slot
+    uuid: c881a944-6e30-4466-9e46-dfe37f391102
+    component_id: marker.page_content
+    component_version: 3b12c0b99a6caecc
+    inputs: {  }
+  40f959a2-efc7-4aef-9a00-332eabb1d8a1:
+    uuid: 40f959a2-efc7-4aef-9a00-332eabb1d8a1
+    component_id: sdc.juc_sdc.section
+    component_version: b44fffccb901691d
+    inputs:
+      width: 100%
+      columns: '100'
+      mobile_columns: '1'
+      margin_block_start: '48'
+      margin_block_end: '0'
+      padding_block_start: '0'
+      padding_block_end: '64'
+      padding_left: '0'
+      inner_spacing: small
+      theme: default
+      background_color: base-300
+      section_header: true
+      section_footer: true
+      full_width_background: true
+  85b01934-8c0a-43ae-82f8-795c7b7e8b2c:
+    parent_uuid: 40f959a2-efc7-4aef-9a00-332eabb1d8a1
+    slot: header_slot
+    uuid: 85b01934-8c0a-43ae-82f8-795c7b7e8b2c
+    component_id: sdc.whitecross.group
+    component_version: 5b8517841c0015ea
+    inputs:
+      flex_direction: row
+      flex_gap: md
+      items_align: start
+      flex_align: center
+      radius: sm
+      padding: sm
+  5f069985-e7cf-4dc9-9e5b-ef23e71cd438:
+    parent_uuid: 85b01934-8c0a-43ae-82f8-795c7b7e8b2c
+    slot: group_slot
+    uuid: 5f069985-e7cf-4dc9-9e5b-ef23e71cd438
+    component_id: sdc.daisyui_sdc.daisy-button
+    component_version: 4a198efe30ac6cb8
+    inputs:
+      url:
+        uri: 'https://www.facebook.com/193whitecross'
+        options: {  }
+      style: accent
+      variant: solid
+      size: lg
+      shape: circle
+      radius: default
+      icon: facebook-logo
+      icon_position: start
+      icon_pack: phosphor
+      tooltip: facebook
+      open_in_new_tab: false
+      disabled: false
+      button_type: button
+      aria_label: 'Close dialog'
+      title: 'More information'
+      data_theme: dark
+  b1717887-75a2-40ad-b090-3a2a9dceaaf4:
+    parent_uuid: 85b01934-8c0a-43ae-82f8-795c7b7e8b2c
+    slot: group_slot
+    uuid: b1717887-75a2-40ad-b090-3a2a9dceaaf4
+    component_id: sdc.daisyui_sdc.daisy-button
+    component_version: 4a198efe30ac6cb8
+    inputs:
+      url:
+        uri: 'https://www.youtube.com/channel/UC9UzNCWv_xHS65ZtJj6Ll0g'
+        options: {  }
+      style: accent
+      variant: solid
+      size: lg
+      shape: circle
+      radius: default
+      icon: youtube-logo
+      icon_position: start
+      icon_pack: phosphor
+      tooltip: youtube
+      open_in_new_tab: false
+      disabled: false
+      button_type: button
+      aria_label: 'Close dialog'
+      title: 'More information'
+      data_theme: dark
+  76bc6e9b-2be3-413c-872a-5fc6921fd280:
+    parent_uuid: 85b01934-8c0a-43ae-82f8-795c7b7e8b2c
+    slot: group_slot
+    uuid: 76bc6e9b-2be3-413c-872a-5fc6921fd280
+    component_id: sdc.daisyui_sdc.daisy-button
+    component_version: 4a198efe30ac6cb8
+    inputs:
+      url:
+        uri: 'https://www.instagram.com/193whitecross'
+        options: {  }
+      style: accent
+      variant: solid
+      size: lg
+      shape: circle
+      radius: default
+      icon: instagram-logo
+      icon_position: start
+      icon_pack: phosphor
+      tooltip: instagram
+      open_in_new_tab: false
+      disabled: false
+      button_type: button
+      aria_label: 'Close dialog'
+      title: 'More information'
+      data_theme: dark
+  8df75d9d-4601-4939-9fa9-dbcfdfcdf857:
+    parent_uuid: 85b01934-8c0a-43ae-82f8-795c7b7e8b2c
+    slot: group_slot
+    uuid: 8df75d9d-4601-4939-9fa9-dbcfdfcdf857
+    component_id: sdc.daisyui_sdc.daisy-button
+    component_version: 4a198efe30ac6cb8
+    inputs:
+      url:
+        uri: 'https://www.tiktok.com/@193.wx'
+        options: {  }
+      style: accent
+      variant: solid
+      size: lg
+      shape: circle
+      radius: default
+      icon: tiktok-logo
+      icon_position: start
+      icon_pack: phosphor
+      tooltip: tiktok
+      open_in_new_tab: false
+      disabled: false
+      button_type: button
+      aria_label: 'Close dialog'
+      title: 'More information'
+      data_theme: dark
+  9d60a41d-7938-4f62-bcb2-07fae7700b35:
+    parent_uuid: 40f959a2-efc7-4aef-9a00-332eabb1d8a1
+    slot: main_slot
+    uuid: 9d60a41d-7938-4f62-bcb2-07fae7700b35
+    component_id: sdc.juc_sdc.group
+    component_version: dd8cb95a77bf3c47
+    inputs:
+      flex_direction: column
+      flex_gap: md
+      items_align: center
+      flex_align: center
+      radius: sm
+      padding: sm
+  5b228944-fe67-481c-9109-2d81160f312a:
+    parent_uuid: 9d60a41d-7938-4f62-bcb2-07fae7700b35
+    slot: group_slot
+    uuid: 5b228944-fe67-481c-9109-2d81160f312a
+    component_id: sdc.whitecross.text
+    component_version: 69de1c8ca50b46e5
+    inputs:
+      text:
+        value: '<p>193 Whitecross Street, London, EC1Y 8QP</p>'
+        format: canvas_html_block
+      text_size: normal
+      line_height: default
+      text_color: default
+  f46d0cbb-e7bd-4273-b32c-f4a64d2580f4:
+    parent_uuid: 9d60a41d-7938-4f62-bcb2-07fae7700b35
+    slot: group_slot
+    uuid: f46d0cbb-e7bd-4273-b32c-f4a64d2580f4
+    component_id: sdc.whitecross.text
+    component_version: 69de1c8ca50b46e5
+    inputs:
+      text:
+        value: '<p><a href="tel:02071234567">020 7250 3340&nbsp;</a></p>'
+        format: canvas_html_block
+      text_size: normal
+      line_height: default
+      text_color: default
+  ff5b1fb2-399d-499f-b7d3-6abfa2e007cc:
+    parent_uuid: 9d60a41d-7938-4f62-bcb2-07fae7700b35
+    slot: group_slot
+    uuid: ff5b1fb2-399d-499f-b7d3-6abfa2e007cc
+    component_id: sdc.whitecross.text
+    component_version: 69de1c8ca50b46e5
+    inputs:
+      text:
+        value: '<p><a href="mailto:hello@whitecross.com">hello@whitecross.com</a></p>'
+        format: canvas_html_block
+      text_size: normal
+      line_height: default
+      text_color: default
+  e8150ebe-487a-4193-8cdc-5a25da9a1e5f:
+    parent_uuid: 40f959a2-efc7-4aef-9a00-332eabb1d8a1
+    slot: footer_slot
+    uuid: e8150ebe-487a-4193-8cdc-5a25da9a1e5f
+    component_id: sdc.whitecross.image
+    component_version: 1b1e261c4056cbbd
+    inputs:
+      media:
+        target_id: '5'
+      size: auto
+      radius: small
+      url: 'https://www.cqc.org.uk/'
+      style: none
+      background: noColor
+      padding: none
+      background_color: none
+      border: none

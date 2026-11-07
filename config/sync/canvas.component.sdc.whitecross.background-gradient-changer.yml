@@ -1,0 +1,61 @@
+uuid: 4ffa8184-0dfa-42dd-bd1c-e450913d7680
+langcode: en
+status: true
+dependencies:
+  theme:
+    - whitecross
+active_version: 5033209e5e7abcaa
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        gradient1:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        gradient2:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        gradient3:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        content:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+    fallback_metadata:
+      slot_definitions:
+        children:
+          title: Content
+          description: 'The rich content of the div.'
+label: 'Background Gradient Changer'
+id: sdc.whitecross.background-gradient-changer
+provider: whitecross
+source: sdc
+source_local_id: 'whitecross:background-gradient-changer'

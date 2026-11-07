@@ -1,0 +1,29 @@
+uuid: d55a4ff5-597b-4dee-8784-1679bc5df7ff
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_treatments_taxonomy
+    - node.type.practitioner
+    - taxonomy.vocabulary.treatments
+id: node.practitioner.field_treatments_taxonomy
+field_name: field_treatments_taxonomy
+entity_type: node
+bundle: practitioner
+label: 'Treatments Taxonomy'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      treatments: treatments
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

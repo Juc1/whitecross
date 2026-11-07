@@ -1,0 +1,25 @@
+uuid: d6b17990-6922-4d8a-8f55-eadb11399464
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:c1f01f6b-ddd2-494a-b233-ca54434fac68'
+  module:
+    - block_content
+active_version: 4656533d69711297
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'block_content:c1f01f6b-ddd2-494a-b233-ca54434fac68'
+        label: '193 logo'
+        label_display: '0'
+        provider: block_content
+        view_mode: full
+    fallback_metadata:
+      slot_definitions: null
+label: '193 logo'
+id: block.block_content.c1f01f6b-ddd2-494a-b233-ca54434fac68
+provider: block_content
+source: block
+source_local_id: 'block_content:c1f01f6b-ddd2-494a-b233-ca54434fac68'

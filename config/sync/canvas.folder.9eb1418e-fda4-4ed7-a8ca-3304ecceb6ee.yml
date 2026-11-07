@@ -1,0 +1,29 @@
+uuid: 9eb1418e-fda4-4ed7-a8ca-3304ecceb6ee
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.block.shortcuts
+    - canvas.component.block.system_menu_block.account
+    - canvas.component.block.system_menu_block.admin
+    - canvas.component.block.system_menu_block.content
+    - canvas.component.block.system_menu_block.features
+    - canvas.component.block.system_menu_block.footer
+    - canvas.component.block.system_menu_block.main
+    - canvas.component.block.system_menu_block.menu-main-menu-smartphone
+    - canvas.component.block.system_menu_block.navigation-user-links
+    - canvas.component.block.system_menu_block.tools
+name: Menus
+configEntityTypeId: component
+weight: 0
+items:
+  - block.shortcuts
+  - block.system_menu_block.account
+  - block.system_menu_block.admin
+  - block.system_menu_block.content
+  - block.system_menu_block.features
+  - block.system_menu_block.footer
+  - block.system_menu_block.main
+  - block.system_menu_block.menu-main-menu-smartphone
+  - block.system_menu_block.navigation-user-links
+  - block.system_menu_block.tools

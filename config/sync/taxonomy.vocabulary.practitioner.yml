@@ -1,0 +1,9 @@
+uuid: dcbdf5e2-0ab5-4e03-aab0-465888d25fb3
+langcode: en
+status: true
+dependencies: {  }
+name: Practitioner
+vid: practitioner
+description: null
+weight: 0
+new_revision: false

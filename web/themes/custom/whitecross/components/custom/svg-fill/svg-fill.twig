@@ -1,0 +1,114 @@
+{#
+/**
+ * @file
+ * Template for the SVG Fill component using currentColor.
+ *
+ * Available variables:
+ * - media: Media image/svg object containing src, alt.
+ * - svg_path: Path or URL to the SVG file.
+ * - svg_code: Raw inline SVG XML markup.
+ * - fill_color: Color preset or variable name.
+ * - custom_color: Hex/CSS color if fill_color is 'custom'.
+ * - height: Height preset ('navbar-responsive', 'h-6', 'h-8', 'h-10', 'h-12', 'h-14', 'h-16', 'h-20', 'h-full', 'auto').
+ * - alignment: 'left', 'center', 'right'.
+ * - url: Optional link URL.
+ * - svg_slot: Slot for nested SVG markup.
+ */
+#}
+
+{% set color_map = {
+  'default': 'var(--color-primary, var(--primary, #a0bbdb))',
+  'primary': 'var(--color-primary, var(--primary, #a0bbdb))',
+  'secondary': 'var(--color-secondary, var(--secondary, #7865bb))',
+  'accent': 'var(--color-accent, var(--accent, #c04147))',
+  'muted': 'var(--color-muted, var(--muted, #64748b))',
+  'radley-blue': 'var(--radley-blue, #a0bbdb)',
+  'radley-purple': 'var(--radley-purple, #8e75ae)',
+  'radley-red': 'var(--radley-red, #d182a0)',
+  'pink': 'var(--pink, #ecc4c7)',
+  'black': '#000000',
+  'white': '#ffffff',
+  'current': 'currentColor',
+  'custom': custom_color|default('currentColor')
+} %}
+
+{% set resolved_color = color_map[fill_color]|default(custom_color|default('var(--color-primary, var(--primary, #a0bbdb))')) %}
+
+{% set height_classes = {
+  'navbar-responsive': 'h-8 md:h-12',
+  'h-6': 'h-6',
+  'h-8': 'h-8',
+  'h-10': 'h-10',
+  'h-12': 'h-12',
+  'h-14': 'h-14',
+  'h-16': 'h-16',
+  'h-20': 'h-20',
+  'h-full': 'h-full',
+  'auto': 'h-auto'
+}[height|default('navbar-responsive')] %}
+
+{% set align_classes = {
+  'left': 'justify-start mr-auto',
+  'center': 'justify-center mx-auto',
+  'right': 'justify-end ml-auto'
+}[alignment|default('left')] %}
+
+{% set resolved_svg_path = '' %}
+{% if media %}
+  {% if media is iterable and media.src %}
+    {% set resolved_svg_path = media.src %}
+  {% elseif media is not iterable %}
+    {% set resolved_svg_path = media %}
+  {% endif %}
+{% elseif svg_path is not empty %}
+  {% set resolved_svg_path = svg_path %}
+{% endif %}
+
+{# Normalize path for Twig source() by stripping domain, query string, and leading slashes #}
+{% set clean_path = resolved_svg_path|split('?')|first %}
+{% if 'sites/default/files/' in clean_path %}
+  {% set source_path = 'sites/default/files/' ~ (clean_path|split('sites/default/files/')|last) %}
+{% elseif 'themes/' in clean_path %}
+  {% set source_path = 'themes/' ~ (clean_path|split('themes/')|last) %}
+{% elseif 'core/' in clean_path %}
+  {% set source_path = 'core/' ~ (clean_path|split('core/')|last) %}
+{% elseif 'modules/' in clean_path %}
+  {% set source_path = 'modules/' ~ (clean_path|split('modules/')|last) %}
+{% else %}
+  {% set source_path = clean_path|trim('/') %}
+{% endif %}
+
+{% set container_tag = url ? 'a' : 'div' %}
+{% set container_attributes = create_attribute() %}
+
+{% if url %}
+  {% set container_attributes = container_attributes.setAttribute('href', url) %}
+{% endif %}
+
+{% set container_attributes = container_attributes.addClass(
+  'svg-fill-container',
+  'inline-flex',
+  'items-center',
+  'max-w-full',
+  align_classes,
+  height_classes,
+  '[&_svg]:h-full [&_svg]:w-auto [&_svg]:max-h-full [&_svg]:max-w-full [&_svg]:!fill-current [&_path]:!fill-current [&_circle]:!fill-current [&_rect]:!fill-current [&_polygon]:!fill-current [&_g]:!fill-current [&_text]:!fill-current [&_img]:h-full [&_img]:w-auto'
+).setAttribute('style', 'color: ' ~ resolved_color ~ ';') %}
+
+<{{ container_tag }} {{ container_attributes }}>
+  {% if svg_code is not empty %}
+    {{ svg_code|raw }}
+  {% elseif source_path is not empty %}
+    {% set inlined_svg = source(source_path, ignore_missing = true) %}
+    {% if inlined_svg %}
+      {{ inlined_svg|raw }}
+    {% elseif resolved_svg_path is not empty %}
+      <img src="{{ resolved_svg_path }}" alt="{{ media.alt|default('') }}" class="h-full w-auto" />
+    {% endif %}
+  {% else %}
+    {% block svg_slot %}
+      {{ content }}
+      {{ children }}
+    {% endblock %}
+  {% endif %}
+</{{ container_tag }}>

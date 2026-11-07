@@ -1,0 +1,34 @@
+uuid: 9bf1f0da-86ca-4885-b741-60c6ed6dcd68
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_treatments_prices_2
+    - node.type.practitioner
+    - paragraphs.paragraphs_type.treatments_prices_2
+  module:
+    - entity_reference_revisions
+id: node.practitioner.field_treatments_prices_2
+field_name: field_treatments_prices_2
+entity_type: node
+bundle: practitioner
+label: 'Treatments Prices 2'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      treatments_prices_2: treatments_prices_2
+    negate: 0
+    target_bundles_drag_drop:
+      treatment_prices:
+        weight: 3
+        enabled: false
+      treatments_prices_2:
+        weight: 4
+        enabled: true
+field_type: entity_reference_revisions

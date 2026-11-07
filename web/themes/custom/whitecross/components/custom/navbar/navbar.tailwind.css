@@ -1,0 +1,50 @@
+@layer components;
+
+.navbar {
+  border-bottom: 1px solid var(--navbar-border, gainsboro);
+}
+
+/* Modal state - prevents body scroll when mobile menu is open */
+:root.navbar-modal-open {
+  &,
+  body {
+    overflow: hidden;
+  }
+}
+
+/* Menu visibility toggle (controlled by JS) */
+.navbar--menu:not(.navbar--menu--open) {
+  @apply hidden md:flex;
+}
+
+/* Child component styling that can't be moved to Twig */
+.navbar--links .button.button {
+  @apply mx-8 w-[calc(100%-var(--spacing)*16)] md:m-auto md:w-auto;
+}
+
+.navbar--dropdown-menu .dropdown-menu {
+  @apply w-full md:w-auto;
+}
+
+.navbar--dropdown-menu-wrapper > :last-child {
+  @apply pb-24 md:pb-0;
+}
+
+/* External region styling */
+.region-header {
+  .navbar--modal-top {
+    @apply px-4;
+  }
+}
+
+/* Branding component styling */
+.navbar--logo,
+.navbar--modal-logo {
+  .branding {
+    @apply h-12 md:h-[80px] max-w-full flex items-center;
+    svg,
+    img {
+      @apply h-full! w-auto! max-h-full max-w-full object-contain;
+    }
+  }
+}

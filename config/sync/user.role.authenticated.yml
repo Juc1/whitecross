@@ -1,0 +1,42 @@
+uuid: e6215224-a0c1-42dc-9f26-30e87298dab2
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.filtered_html
+    - filter.format.full_html
+    - filter.format.webform_default
+    - node.type.testimonial
+    - node.type.treatment
+  module:
+    - file
+    - filter
+    - media
+    - node
+    - shortcut
+    - system
+    - toolbar
+_core:
+  default_config_hash: dJ0L2DNSj5q6XVZAGsuVDpJTh5UeYkIPwKrUOOpr8YI
+id: authenticated
+label: 'authenticated user'
+weight: 1
+is_admin: false
+permissions:
+  - 'access content'
+  - 'access content overview'
+  - 'access shortcuts'
+  - 'access toolbar'
+  - 'administer nodes'
+  - 'create testimonial content'
+  - 'create treatment content'
+  - 'delete any treatment content'
+  - 'delete own files'
+  - 'edit any treatment content'
+  - 'edit own treatment content'
+  - 'rebuild node access permissions'
+  - 'use text format filtered_html'
+  - 'use text format full_html'
+  - 'use text format webform_default'
+  - 'view media'
+  - 'view the administration theme'

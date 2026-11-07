@@ -1,0 +1,35 @@
+uuid: 250cffc9-2e7e-4a87-b48f-765757fb27e2
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+  theme:
+    - whitecross
+active_version: 025d37972731263d
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        theme:
+          required: true
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: pink
+          expression: ℹ︎list_string␟value
+          derived_schema_metadata: {  }
+    fallback_metadata:
+      slot_definitions:
+        content:
+          title: Content
+          description: 'Page content, header, and regions.'
+label: 'Page Wrapper'
+id: sdc.whitecross.page-wrapper
+provider: whitecross
+source: sdc
+source_local_id: 'whitecross:page-wrapper'

@@ -1,0 +1,81 @@
+uuid: eca422f8-a345-4a50-a8d5-a0d1b0a5acfb
+langcode: en
+status: true
+dependencies: {  }
+id: breakpointsjr2
+label: 'Breakpoints JR2'
+description: ''
+breakpoint: false
+swiper_options:
+  enabled: true
+  source: remote
+  autoHeight: false
+  width: null
+  height: null
+  observer: false
+  updateOnWindowResize: true
+  resizeObserver: true
+  direction: horizontal
+  effect: slide
+  loop: true
+  rewind: false
+  centeredSlides: false
+  speed: 300
+  slidesPerView: 4.0
+  spaceBetween: 0
+  slidesPerGroup: 1
+  loopedSlides: null
+  noSwipingSelector: '.no-swipe, button, input'
+  mousewheel: false
+  grabCursor: true
+  simulateTouch: true
+  allowTouchMove: true
+  cssMode: false
+  grid:
+    enabled: false
+    rows: 1
+    fill: column
+  keyboard:
+    enabled: false
+    onlyInViewport: true
+    pageUpDown: true
+  autoplay:
+    enabled: true
+    delay: 4000
+    disableOnInteraction: true
+    pauseOnMouseEnter: false
+    reverseDirection: false
+    stopOnLastSlide: false
+    waitForTransition: true
+  navigation:
+    enabled: true
+    hideOnClick: false
+  pagination:
+    enabled: false
+    type: null
+    dynamicBullets: false
+    clickable: false
+  scrollbar:
+    enabled: false
+    draggable: false
+    dragSize: auto
+    hide: true
+    snapOnRelease: false
+  zoom:
+    enabled: false
+    limitToOriginalSize: false
+    maxRatio: 3
+    minRatio: 1
+    panOnMouseMove: false
+    toggle: true
+  breakpoints:
+    breakpoint: null
+    swiper_template: null
+    weight: 0
+  lazy:
+    enabled: false
+    checkInView: false
+    loadOnTransitionStart: false
+    loadPrevNext: false
+    loadPrevNextAmount: 1
+    scrollingElement: window

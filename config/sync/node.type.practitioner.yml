@@ -1,0 +1,25 @@
+uuid: 0764232d-c33a-487f-a241-ca0e68205f23
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - type_tray
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+  type_tray:
+    type_category: _none
+    type_thumbnail: ''
+    type_icon: /themes/whitecross/images/type-tray/face.svg
+    type_description: ''
+    existing_nodes_link_text: 'View existing <em class="placeholder">Practitioner</em> content'
+    type_weight: -10
+name: Practitioner
+type: practitioner
+description: "Bio / contact details etc \r\nfor example\r\n"
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: true

@@ -1,0 +1,11 @@
+uuid: 05368a85-d522-4cdc-ba88-e77669788dbc
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.card
+label: Card
+description: null
+targetEntityType: node
+cache: true

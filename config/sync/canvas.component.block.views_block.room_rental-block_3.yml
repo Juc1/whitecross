@@ -1,0 +1,26 @@
+uuid: 43092ee2-930a-4c04-ad66-3f1adea7ddc0
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.room_rental
+  module:
+    - views
+active_version: e64688501e6875f5
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_block:room_rental-block_3'
+        label: 'Room Rental'
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+    fallback_metadata:
+      slot_definitions: null
+label: 'Room Rental'
+id: block.views_block.room_rental-block_3
+provider: views
+source: block
+source_local_id: 'views_block:room_rental-block_3'

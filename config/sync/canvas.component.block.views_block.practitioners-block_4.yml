@@ -1,0 +1,37 @@
+uuid: 26ad4f77-f81f-4b2e-ae76-b1556b9ba5d9
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.practitioners
+  module:
+    - views
+active_version: 12fc49d87a03a9a2
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_block:practitioners-block_4'
+        label: 'Practitioners: grid'
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+    fallback_metadata:
+      slot_definitions: null
+  8cfc8b0aced48834:
+    settings:
+      default_settings:
+        id: 'views_block:practitioners-block_4'
+        label: 'Practitioners: Practitioners'
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+    fallback_metadata:
+      slot_definitions: null
+label: 'Practitioners: grid'
+id: block.views_block.practitioners-block_4
+provider: views
+source: block
+source_local_id: 'views_block:practitioners-block_4'

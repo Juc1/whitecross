@@ -1,0 +1,21 @@
+uuid: 59d41141-82bf-481a-9cdf-d23c4fcdbe1b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_bio
+    - node.type.practitioner
+  module:
+    - text
+id: node.practitioner.field_bio
+field_name: field_bio
+entity_type: node
+bundle: practitioner
+label: Bio
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

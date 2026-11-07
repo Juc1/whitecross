@@ -1,0 +1,21 @@
+uuid: bff6fbcd-a0e9-43d7-baf5-eed856b1e34d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_contact
+    - node.type.practitioner
+  module:
+    - text
+id: node.practitioner.field_contact
+field_name: field_contact
+entity_type: node
+bundle: practitioner
+label: Contact
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

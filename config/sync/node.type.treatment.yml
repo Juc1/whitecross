@@ -1,0 +1,26 @@
+uuid: 17340a21-b5c4-41a3-b71f-ee6095eee2e5
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - type_tray
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+  type_tray:
+    type_category: _none
+    type_thumbnail: ''
+    type_icon: /themes/whitecross/images/type-tray/syringe.svg
+    type_description: ''
+    existing_nodes_link_text: 'View existing <em class="placeholder">Treatment</em> content'
+    type_weight: -12
+name: Treatment
+type: treatment
+description: 'ie treatment such as Massage, as opposed to practitioner which is a person'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

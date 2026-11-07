@@ -1,0 +1,26 @@
+uuid: c1bd4cef-b473-42f3-801f-35e1822deb39
+langcode: en
+status: false
+dependencies:
+  config:
+    - views.view.content_recent
+  module:
+    - views
+active_version: 9ac26ed823b50137
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_block:content_recent-block_6'
+        label: 'Recent content: Blog sidebar'
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+    fallback_metadata:
+      slot_definitions: null
+label: 'Recent content: Blog sidebar'
+id: block.views_block.content_recent-block_6
+provider: views
+source: block
+source_local_id: 'views_block:content_recent-block_6'

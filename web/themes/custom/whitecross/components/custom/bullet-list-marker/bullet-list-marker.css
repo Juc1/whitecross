@@ -1,0 +1,58 @@
+/* Flat CSS rules for maximum compatibility and specificity override */
+.bullet-list-marker ul {
+  list-style-type: disc; /* Ensure the list marker exists by default */
+  padding-left: 1.5rem;  /* Indentation */
+  margin-bottom: 1.5rem;
+}
+
+.bullet-list-marker ul li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.bullet-list-marker ul li:last-child {
+  margin-bottom: 0;
+}
+
+/* Target the native ::marker using dynamic CSS variables */
+.bullet-list-marker ul li::marker {
+  content: var(--marker-content, "• ");
+  font-size: var(--marker-font-size, inherit);
+  color: var(--marker-color, inherit);
+}
+
+/* When an icon is provided, we switch to ::before + CSS Masks */
+.bullet-list-marker.has-icon ul {
+  list-style-type: none !important;
+}
+
+.bullet-list-marker.has-icon ul li {
+  list-style-type: none !important;
+  position: relative;
+  padding-left: 1.75rem; /* Space for the icon */
+}
+
+/* Explicitly disable the native marker box to prevent duplicate bullets */
+.bullet-list-marker.has-icon ul li::marker {
+  content: none !important;
+}
+
+.bullet-list-marker.has-icon ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.25em; /* Vertically center icon with the first line of text */
+  width: var(--marker-font-size, 1.1em);
+  height: var(--marker-font-size, 1.1em);
+  background-color: var(--marker-color, currentColor);
+
+  /* CSS Mask to render the icon in any color */
+  mask-image: var(--marker-mask-url);
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-image: var(--marker-mask-url);
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+}

@@ -1,0 +1,45 @@
+uuid: 168f0597-89df-48ef-92fc-f0954264fef7
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.sdc.daisyui_sdc.daisy-card-teaser
+    - core.entity_view_mode.node.card
+    - field.field.node.treatment.field_treatment_image
+    - image.style.canvas_parametrized_width
+    - node.type.treatment
+  module:
+    - file
+    - node
+    - options
+id: node.treatment.card
+content_entity_type_id: node
+content_entity_type_bundle: treatment
+content_entity_type_view_mode: card
+component_tree:
+  '0:1863eed1-2197-4316-a96b-73b06a5c46f1':
+    uuid: 1863eed1-2197-4316-a96b-73b06a5c46f1
+    component_id: sdc.daisyui_sdc.daisy-card-teaser
+    component_version: ed0b33e22ec23c1c
+    inputs:
+      heading_text:
+        sourceType: entity-field
+        expression: 'ℹ︎␜entity:node:treatment␝title␞␟value'
+      level: 3
+      url:
+        sourceType: host-entity-url
+        absolute: false
+      media:
+        sourceType: entity-field
+        expression: 'ℹ︎␜entity:node:treatment␝field_treatment_image␞␟{src↠src_with_alternate_widths,alt↠alt,width↠width,height↠height}'
+      aspect_ratio: '3:2'
+      is_text_centered: false
+      orientation: vertical
+      style: full
+      size: md
+      background: base-300
+      shadow: xl
+      border_top: false
+      border_top_color: primary
+exposed_slots: {  }
+page_variant: null

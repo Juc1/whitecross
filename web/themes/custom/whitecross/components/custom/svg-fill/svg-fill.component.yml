@@ -1,0 +1,116 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: SVG Fill
+group: Custom
+description: "Renders an SVG logo or graphic using currentColor with selectable theme fill colors and navbar height presets."
+status: stable
+props:
+  type: object
+  properties:
+    fill_color:
+      type: string
+      title: Fill Color
+      description: "Select the fill color applied to the SVG via currentColor."
+      enum:
+        - default
+        - primary
+        - secondary
+        - accent
+        - muted
+        - radley-blue
+        - radley-purple
+        - radley-red
+        - pink
+        - black
+        - white
+        - current
+        - custom
+      meta:enum:
+        default: "Inherit"
+        primary: "Primary Theme Color"
+        secondary: "Secondary Theme Color"
+        accent: "Accent Theme Color"
+        muted: "Muted Color"
+        radley-blue: "Radley Blue (#a0bbdb)"
+        radley-purple: "Radley Purple (#8e75ae)"
+        radley-red: "Radley Red (#d182a0)"
+        pink: "Pink (#ecc4c7)"
+        black: "Black"
+        white: "White"
+        current: "Current Text Color"
+        custom: "Custom Color"
+      default: default
+      examples:
+        - default
+    custom_color:
+      type: string
+      title: Custom Color (Hex/CSS)
+      description: "Enter a custom color string (e.g. #0072af, #c04147, rgba(...)) when Fill Color is set to Custom."
+      examples:
+        - "#0072af"
+    height:
+      type: string
+      title: Height
+      description: "Controls the logo height. The width automatically adjusts to preserve your SVG's exact aspect ratio (e.g. 6:1)."
+      enum:
+        - navbar-responsive
+        - h-6
+        - h-8
+        - h-10
+        - h-12
+        - h-14
+        - h-16
+        - h-20
+        - h-full
+        - auto
+      meta:enum:
+        navbar-responsive: "Navbar Responsive (32px Mobile / 48px Desktop)"
+        h-6: "Extra Small (24px)"
+        h-8: "Small / Mobile Navbar (32px)"
+        h-10: "Medium (40px)"
+        h-12: "Large / Desktop Navbar (48px)"
+        h-14: "Extra Large (56px)"
+        h-16: "2X Large (64px)"
+        h-20: "3X Large (80px)"
+        h-full: "Full Height (100% of parent)"
+        auto: "Auto (Natural height)"
+      default: navbar-responsive
+      examples:
+        - navbar-responsive
+    svg_path:
+      type: string
+      title: SVG File Path
+      description: "Path to the SVG file relative to site root (e.g. themes/custom/radley/byte-logo.svg or /sites/default/files/...)."
+      examples:
+        - "themes/custom/radley/byte-logo.svg"
+    media:
+      $ref: json-schema-definitions://canvas.module/image
+      title: SVG Media Asset
+      description: "Select an SVG from the Drupal Media Library."
+      type: object
+    svg_code:
+      type: string
+      title: Inline SVG Code
+      description: "Direct SVG XML markup if you paste raw SVG code."
+      pattern: "(.|\\r?\\n)*"
+    alignment:
+      type: string
+      title: Alignment
+      enum:
+        - left
+        - center
+        - right
+      meta:enum:
+        left: Left
+        center: Center
+        right: Right
+      default: left
+      examples:
+        - left
+    url:
+      type: string
+      title: Link URL
+      description: "Optional URL to make the SVG logo a link (e.g. '/' for home page)."
+slots:
+  svg_slot:
+    title: SVG Slot Content
+    description: "Slot for directly embedding or nesting SVG markup."

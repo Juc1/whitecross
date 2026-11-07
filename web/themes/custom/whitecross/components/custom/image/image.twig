@@ -1,0 +1,147 @@
+{# Detailed Comment: Check and define default values for radius, url, style, background, padding, custom background, and border options #}
+{% set has_radius = radius is not empty ? 'yes' : 'no' %}
+{% set has_url = url is not empty ? 'yes' : 'no' %}
+{% set card_style = style|default('none') %}
+{% set card_background = background|default('noColor') %}
+{% set card_padding = padding|default('none') %}
+{% set custom_bg_color = background_color|default('none') %}
+{% set card_border = border|default('none') %}
+
+{# Detailed Comment: Configure CVA classes for the outer image container to support responsive dimensions, borders, and custom styles.
+   We support style variants (framed with padding vs full borderless layout) and background color styling options to support solid colors behind the image when framed.
+   For the 'framed' style, we also apply nested selectors [&_img] and [&_a] to ensure the inner image/link has rounded corners.
+   Additionally, we use a compound variant to add a border to framed layouts that have no background color active. #}
+{% set image_container =
+  html_cva(
+    base: 'cq-full relative grid w-full',
+    variants: {
+      size: {
+        auto: '',
+        '2:1': 'aspect-2/1',
+        '16:9': 'aspect-16/9',
+        '3:2': 'aspect-3/2',
+        '4:3': 'aspect-4/3',
+        '1:1': 'aspect-1/1',
+        '4:5': 'aspect-4/5',
+        '2:3': 'aspect-2/3'
+      },
+      hasRadius: {
+        yes: 'overflow-hidden',
+        no: 'rounded-none'
+      },
+      radius: {
+        small: 'rounded-sm',
+        large: 'rounded-xl md:rounded-2xl',
+        'extra-large': 'rounded-[24px] md:rounded-[32px]'
+      },
+      style: {
+        none: '',
+        full: '',
+        framed: 'gap-4 shadow-lg lg:gap-4 [&_a]:overflow-hidden [&_a]:rounded-lg [&_img]:overflow-hidden [&_img]:rounded-lg',
+        'shadow-xl': 'max-w-sm overflow-hidden rounded-xl border border-slate-200/40 shadow-xl [&_a]:rounded-lg [&_img]:rounded-lg',
+        'shadow-2xl': 'max-w-sm overflow-hidden rounded-xl shadow-2xl [&_a]:rounded-lg [&_img]:rounded-lg'
+      },
+      backgroundColor: {
+        default: 'bg-card text-card-foreground hover:bg-card/80',
+        accent: 'bg-accent text-accent-foreground hover:bg-accent/80',
+        primary: 'bg-primary text-primary-foreground hover:bg-primary/80',
+        inverted: 'bg-foreground text-background hover:bg-foreground/80',
+        noColor: ''
+      },
+      padding: {
+        none: '',
+        'p-1': 'p-1',
+        'p-2': 'p-2',
+        'p-3': 'p-3',
+        'p-4': 'p-4',
+        'p-5': 'p-5'
+      },
+      customBgColor: {
+        none: '',
+        white: 'bg-white',
+        'slate-50': 'bg-slate-50',
+        'stone-50': 'bg-stone-50',
+        'slate-100': 'bg-slate-100',
+        'slate-200': 'bg-slate-200'
+      },
+      border: {
+        none: '',
+        border: 'border border-slate-200/40',
+        'border-2': 'border-2 border-slate-200/40',
+        'border-4': 'border-4 border-slate-200/40'
+      }
+    },
+    compound_variants: [
+      {
+        style: ['framed'],
+        backgroundColor: ['noColor'],
+        class: 'border border-secondary'
+      }
+    ]
+  )
+%}
+
+{# Detailed Comment: Apply the calculated classes based on user selections from the Canvas settings #}
+{% set container_classes =
+  image_container.apply({
+    size: size,
+    hasRadius: has_radius,
+    radius: radius,
+    style: card_style,
+    backgroundColor: card_background,
+    padding: card_padding,
+    customBgColor: custom_bg_color,
+    border: card_border
+  })
+%}
+
+{% set is_auto = size is empty or size == 'auto' %}
+{% set figure_classes = is_auto ? 'max-w-full flex-1' : 'w-full' %}
+{% set container_classes = is_auto
+  ? container_classes|replace({
+    'w-full': 'max-w-full'
+  })
+  : container_classes
+%}
+{% set link_classes = is_auto ? 'group block max-w-full h-auto' : 'group grid w-full h-full' %}
+{% set img_classes = is_auto ? 'max-w-full h-auto' : 'object-cover w-full h-full' %}
+
+{# 
+  Detailed Comment:
+  - For aspect ratio sizes:
+    - Added 'w-full' to <figure> to prevent width collapse when used inside flex containers (like the Group SDC) in Chrome.
+    - Switched the wrapper container and <a> link wrapper to use 'grid' layouts to prevent the child image's height from collapsing (0x0) in Chrome under aspect-ratio.
+  - For 'auto' sizes:
+    - Uses 'max-w-full flex-1' on <figure> to prevent collapse in flex container rows and ensure all items stretch to equal widths.
+    - Uses block layout with h-auto and max-w-full on children to prevent circular height/width collapse to 0x0 in Chrome.
+#}
+<figure class="{{ figure_classes }}">
+  <div class="{{ container_classes }}">
+    {% block media %}
+      {% if url is not empty %}
+        <a href="{{ url }}" class="{{ link_classes }}">
+          {% include 'canvas:image' ignore missing with {
+            src: media.src,
+            alt: media.alt,
+            class: img_classes ~ ' group-hover:scale-105 duration-300',
+            width: media.width,
+            height: media.height
+          } only %}
+        </a>
+      {% else %}
+        {% include 'canvas:image' ignore missing with {
+          src: media.src,
+          alt: media.alt,
+          class: img_classes,
+          width: media.width,
+          height: media.height
+        } only %}
+      {% endif %}
+    {% endblock %}
+  </div>
+  {% if caption %}
+    <figcaption class="block py-1 text-sm lg:py-2 lg:text-base">
+      {{ caption }}
+    </figcaption>
+  {% endif %}
+</figure>

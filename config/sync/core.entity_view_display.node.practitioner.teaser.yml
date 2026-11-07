@@ -1,0 +1,97 @@
+uuid: a5787558-1f0c-4981-a9f2-b356a24b9ad1
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.practitioner.comment_node_practitioner
+    - field.field.node.practitioner.field__treatments_prices_4
+    - field.field.node.practitioner.field_bio
+    - field.field.node.practitioner.field_company__link
+    - field.field.node.practitioner.field_contact
+    - field.field.node.practitioner.field_description
+    - field.field.node.practitioner.field_email
+    - field.field.node.practitioner.field_email_link
+    - field.field.node.practitioner.field_face
+    - field.field.node.practitioner.field_face_svg
+    - field.field.node.practitioner.field_facebook
+    - field.field.node.practitioner.field_image
+    - field.field.node.practitioner.field_insta
+    - field.field.node.practitioner.field_landline
+    - field.field.node.practitioner.field_logo
+    - field.field.node.practitioner.field_mobile
+    - field.field.node.practitioner.field_phone
+    - field.field.node.practitioner.field_practitioner
+    - field.field.node.practitioner.field_practitioners_page
+    - field.field.node.practitioner.field_second
+    - field.field.node.practitioner.field_treatment_price_paragraph
+    - field.field.node.practitioner.field_treatments
+    - field.field.node.practitioner.field_treatments_prices
+    - field.field.node.practitioner.field_treatments_prices_2
+    - field.field.node.practitioner.field_treatments_prices_3
+    - field.field.node.practitioner.field_treatments_prices_5
+    - field.field.node.practitioner.field_treatments_taxonomy
+    - field.field.node.practitioner.field_whatsapp
+    - image.style.medium
+    - node.type.practitioner
+  module:
+    - image
+id: node.practitioner.teaser
+targetEntityType: node
+bundle: practitioner
+mode: teaser
+content:
+  field_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: content
+      image_style: medium
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: -1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 101
+    region: content
+hidden:
+  comment_node_practitioner: true
+  created: true
+  field__treatments_prices_4: true
+  field_bio: true
+  field_company__link: true
+  field_contact: true
+  field_description: true
+  field_email: true
+  field_email_link: true
+  field_face: true
+  field_face_svg: true
+  field_facebook: true
+  field_insta: true
+  field_landline: true
+  field_logo: true
+  field_mobile: true
+  field_phone: true
+  field_practitioner: true
+  field_practitioners_page: true
+  field_second: true
+  field_treatment_price_paragraph: true
+  field_treatments: true
+  field_treatments_prices: true
+  field_treatments_prices_2: true
+  field_treatments_prices_3: true
+  field_treatments_prices_5: true
+  field_treatments_taxonomy: true
+  field_whatsapp: true
+  uid: true

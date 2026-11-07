@@ -1,0 +1,21 @@
+uuid: 6d56a77c-6077-4e9f-ba30-4d16ac26c52c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_top_image_svg
+    - node.type.treatment
+  module:
+    - text
+id: node.treatment.field_top_image_svg
+field_name: field_top_image_svg
+entity_type: node
+bundle: treatment
+label: 'Top image svg'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

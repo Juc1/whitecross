@@ -1,0 +1,19 @@
+uuid: f07dcc00-89f5-4bcd-a37a-af5f2e7c1e04
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_treatments
+    - node.type.practitioner
+id: node.practitioner.field_treatments
+field_name: field_treatments
+entity_type: node
+bundle: practitioner
+label: Treatments
+description: 'used in /practitioners'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

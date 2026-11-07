@@ -1,0 +1,8 @@
+uuid: ce3114a1-245b-4029-9f1a-de2f3cabd0a3
+langcode: en
+status: true
+dependencies: {  }
+id: comment_node_practitioner
+label: 'Practitioner comment'
+target_entity_type_id: node
+description: null

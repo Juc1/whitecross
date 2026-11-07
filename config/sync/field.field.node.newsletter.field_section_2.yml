@@ -1,0 +1,21 @@
+uuid: 25b7968e-0858-4a64-89c3-6420ad903174
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_section_2
+    - node.type.newsletter
+  module:
+    - text
+id: node.newsletter.field_section_2
+field_name: field_section_2
+entity_type: node
+bundle: newsletter
+label: 'Section 2'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

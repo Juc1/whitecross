@@ -1,0 +1,47 @@
+uuid: 6421ec72-2f67-497b-9946-a3096ffdfb9c
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.sdc.daisyui_sdc.daisy-card-teaser
+    - core.base_field_override.node.practitioner.title
+    - core.entity_view_mode.node.card
+    - field.field.node.practitioner.field_face
+    - image.style.canvas_parametrized_width
+    - node.type.practitioner
+  module:
+    - file
+    - node
+    - options
+id: node.practitioner.card
+content_entity_type_id: node
+content_entity_type_bundle: practitioner
+content_entity_type_view_mode: card
+component_tree:
+  '0:d0efb83e-575a-4a89-99a1-e55a5d94f964':
+    uuid: d0efb83e-575a-4a89-99a1-e55a5d94f964
+    component_id: sdc.daisyui_sdc.daisy-card-teaser
+    component_version: 3af0536c7a0fee3e
+    inputs:
+      heading_text:
+        sourceType: entity-field
+        expression: 'ℹ︎␜entity:node:practitioner␝title␞␟value'
+      level: 3
+      url:
+        sourceType: host-entity-url
+        absolute: false
+      media:
+        sourceType: entity-field
+        expression: 'ℹ︎␜entity:node:practitioner␝field_face␞␟{src↠src_with_alternate_widths,alt↠alt,width↠width,height↠height}'
+      aspect_ratio: '3:2'
+      category: Skincare
+      is_text_centered: false
+      orientation: vertical
+      style: full
+      size: md
+      background: default
+      shadow: xl
+      border_top: false
+      border_top_color: primary
+exposed_slots: {  }
+page_variant: null

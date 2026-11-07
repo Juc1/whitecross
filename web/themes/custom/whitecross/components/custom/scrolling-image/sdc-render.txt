@@ -1,0 +1,25 @@
+{% embed 'byte_theme:scrolling-image' with {
+  media: {
+    src: '/sites/default/files/images/cst/baby.jpg',
+    alt: 'Baby'
+  }
+} only %}
+  {% block scrolling_image_slot %}
+    {{ include('byte_theme:raw-html', {
+      html: 'Touch is the first language we speak.<br>- Stephen Gaskin'
+    }, with_context: false) }}
+  {% endblock %}
+{% endembed %}
+
+{% embed 'byte_theme:scrolling-image' with {
+  media: {
+    src: '/sites/default/files/images/sea.jpg',
+    alt: 'Sea'
+  }
+} only %}
+  {% block scrolling_image_slot %}
+    {{ include('byte_theme:raw-html', {
+      html: 'When I am silent,<br>I fall into the place<br>where everything is music.<br>- Rumi'
+    }, with_context: false) }}
+  {% endblock %}
+{% endembed %}

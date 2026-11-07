@@ -1,0 +1,33 @@
+uuid: 1291bc01-0cfe-4686-ad17-7cc484dddaf8
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.sdc.whitecross.anchor
+    - canvas.component.sdc.whitecross.badge
+    - canvas.component.sdc.whitecross.blockquote
+    - canvas.component.sdc.whitecross.button
+    - canvas.component.sdc.whitecross.decorative-text
+    - canvas.component.sdc.whitecross.heading
+    - canvas.component.sdc.whitecross.icon
+    - canvas.component.sdc.whitecross.image
+    - canvas.component.sdc.whitecross.scrolling-image
+    - canvas.component.sdc.whitecross.scrolling-video
+    - canvas.component.sdc.whitecross.text
+    - canvas.component.sdc.whitecross.video
+name: Base
+configEntityTypeId: component
+weight: 0
+items:
+  - sdc.whitecross.anchor
+  - sdc.whitecross.badge
+  - sdc.whitecross.blockquote
+  - sdc.whitecross.button
+  - sdc.whitecross.decorative-text
+  - sdc.whitecross.heading
+  - sdc.whitecross.icon
+  - sdc.whitecross.image
+  - sdc.whitecross.scrolling-image
+  - sdc.whitecross.scrolling-video
+  - sdc.whitecross.text
+  - sdc.whitecross.video

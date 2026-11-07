@@ -1,0 +1,27 @@
+uuid: ad369bbe-c726-417a-a616-a4af6503f584
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.features
+  module:
+    - system
+active_version: ce3dbc2d02fb364f
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'system_menu_block:features'
+        label: Features
+        label_display: '0'
+        provider: system
+        level: 1
+        depth: null
+        expand_all_items: false
+    fallback_metadata:
+      slot_definitions: null
+label: Features
+id: block.system_menu_block.features
+provider: system
+source: block
+source_local_id: 'system_menu_block:features'

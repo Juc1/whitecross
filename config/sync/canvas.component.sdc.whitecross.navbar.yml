@@ -1,0 +1,38 @@
+uuid: 3e7b27d9-3c3b-4e3b-95cd-d13b970e6312
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+  theme:
+    - whitecross
+active_version: 15d46685b4985e53
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        menu_align:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: right
+          expression: ℹ︎list_string␟value
+          derived_schema_metadata: {  }
+    fallback_metadata:
+      slot_definitions:
+        logo:
+          title: 'Site logo'
+        navigation:
+          title: 'Navigation menu'
+        links:
+          title: CTAs
+label: Navbar
+id: sdc.whitecross.navbar
+provider: whitecross
+source: sdc
+source_local_id: 'whitecross:navbar'

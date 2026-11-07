@@ -1,0 +1,40 @@
+uuid: bbf62889-8ddb-4643-86f7-27edb7693df9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.treatment_prices.field_intro
+    - field.field.paragraph.treatment_prices.field_price_right_
+    - field.field.paragraph.treatment_prices.field_treatment_left_
+    - paragraphs.paragraphs_type.treatment_prices
+  module:
+    - text
+id: paragraph.treatment_prices.default
+targetEntityType: paragraph
+bundle: treatment_prices
+mode: default
+content:
+  field_intro:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_price_right_:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_treatment_left_:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

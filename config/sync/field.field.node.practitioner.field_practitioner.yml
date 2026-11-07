@@ -1,0 +1,29 @@
+uuid: 7122cfb5-bbbd-4b3c-a21a-d48ab96af9d7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_practitioner
+    - node.type.practitioner
+    - taxonomy.vocabulary.practitioner
+id: node.practitioner.field_practitioner
+field_name: field_practitioner
+entity_type: node
+bundle: practitioner
+label: Practitioner
+description: 'Used for filtering testimonials to the relevant practitioner'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      practitioner: practitioner
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

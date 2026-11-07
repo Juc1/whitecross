@@ -1,0 +1,35 @@
+uuid: 31c571a1-3a58-498e-82c0-1b9d7f434ef5
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:f935cae2-e9b3-4421-8902-421a9f6887aa'
+  module:
+    - block_content
+active_version: 73796777519eba5e
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'block_content:f935cae2-e9b3-4421-8902-421a9f6887aa'
+        label: '193 Google map'
+        label_display: '0'
+        provider: block_content
+        view_mode: full
+    fallback_metadata:
+      slot_definitions: null
+  47403b51088d298e:
+    settings:
+      default_settings:
+        id: 'block_content:f935cae2-e9b3-4421-8902-421a9f6887aa'
+        label: 'Google map'
+        label_display: '0'
+        provider: block_content
+        view_mode: full
+    fallback_metadata:
+      slot_definitions: null
+label: '193 Google map'
+id: block.block_content.f935cae2-e9b3-4421-8902-421a9f6887aa
+provider: block_content
+source: block
+source_local_id: 'block_content:f935cae2-e9b3-4421-8902-421a9f6887aa'

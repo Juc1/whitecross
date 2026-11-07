@@ -1,0 +1,11 @@
+uuid: aab48be7-fe5f-434b-9f6a-d6c25c24b71a
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.sdc.daisyui_sdc.theme_controller_toggle
+name: Actions
+configEntityTypeId: component
+weight: 0
+items:
+  - sdc.daisyui_sdc.theme_controller_toggle

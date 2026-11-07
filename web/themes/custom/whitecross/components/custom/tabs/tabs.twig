@@ -1,0 +1,10 @@
+<div class="tabs-wrapper my-8" data-tabs>
+  <div class="tabs--nav mb-6 flex border-b border-border" role="tablist">
+    {# JavaScript will dynamically generate tab buttons here based on child tab-panel titles #}
+  </div>
+  <div class="tabs--content">
+    {% block tab_items %}
+      {# Drop Tab Item components here #}
+    {% endblock %}
+  </div>
+</div>

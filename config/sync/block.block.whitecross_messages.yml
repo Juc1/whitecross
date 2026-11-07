@@ -1,0 +1,22 @@
+uuid: 597abc24-97f2-480d-aff8-a699c38faa05
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - whitecross
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: whitecross_messages
+theme: whitecross
+region: content
+weight: 7
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  label_display: '0'
+  provider: system
+visibility: {  }

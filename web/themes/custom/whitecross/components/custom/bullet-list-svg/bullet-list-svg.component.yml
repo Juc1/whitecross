@@ -1,0 +1,34 @@
+"$schema": "https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json"
+name: Bullet List SVG
+group: Custom
+description: A clean list component that styles bullets using any external SVG file path and a custom color.
+props:
+  type: object
+  required:
+    - text
+  properties:
+    text:
+      type: string
+      title: List Content
+      contentMediaType: text/html
+      x-formatting-context: block
+      default: "<ul>
+        <li>First item</li>
+        <li>Second item</li>
+        <li>Third item</li>
+        </ul>"
+      examples:
+        - "<ul>
+          <li>First item</li>
+          <li>Second item</li>
+          <li>Third item</li>
+          </ul>"
+    bullet_svg_path:
+      type: string
+      title: Bullet SVG File Path
+      description: Path to the SVG icon file relative to the site root (e.g. /themes/custom/radley/icons/phosphor/caret-right.svg).
+      default: "/themes/custom/radley/icons/phosphor/caret-right.svg"
+    color:
+      type: string
+      title: Bullet Color
+      default: ""

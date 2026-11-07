@@ -1,0 +1,35 @@
+<div class="accordion-container">
+  {% block accordion_content %}
+    <div class="accordion overflow-hidden border-b border-border bg-clip-padding bg-background my-4">
+      <h3 class="text-2xl">
+        <button class="accordion--title flex w-full cursor-pointer items-center justify-between p-4 text-left text-2xl transition-colors duration-200 bg-card text-foreground hover:bg-base-200 hover:text-primary">
+          Accordion 1
+          <span class="accordion--icon transition-transform duration-500 in-[.accordion--js.accordion--open]:rotate-180">
+            <img src="/sites/default/files/2026-06/plus-64.png" alt="Accordion icon" width="24" height="24" />
+          </span>
+        </button>
+      </h3>
+      <div class="accordion--content px-4 py-5 text-base text-foreground rich-text">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+      </div>
+    </div>
+
+    <div class="accordion overflow-hidden border-b border-border bg-clip-padding bg-background my-4">
+      <h3 class="text-2xl">
+        <button class="accordion--title flex w-full cursor-pointer items-center justify-between p-4 text-left text-2xl transition-colors duration-200 bg-card text-foreground hover:bg-base-200 hover:text-primary">
+          Accordion 2
+          <span class="accordion--icon transition-transform duration-500 in-[.accordion--js.accordion--open]:rotate-180">
+            <img src="/sites/default/files/2026-06/plus-64.png" alt="Accordion icon" width="24" height="24" />
+          </span>
+        </button>
+      </h3>
+      <div class="accordion--content px-4 py-5 text-base text-foreground rich-text">
+        <p>
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
+        </p>
+      </div>
+    </div>
+  {% endblock %}
+</div>

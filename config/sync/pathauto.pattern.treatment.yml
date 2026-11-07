@@ -1,0 +1,23 @@
+uuid: aff45bf7-e8a5-4679-a03c-48c12581a09d
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.treatment
+  module:
+    - node
+id: treatment
+label: Treatment
+type: 'canonical_entities:node'
+pattern: '/treatments/[node:title]'
+selection_criteria:
+  21cd06ca-cc8a-4d84-bacf-6bf25e65ee4f:
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      treatment: treatment
+selection_logic: and
+weight: -5
+relationships: {  }

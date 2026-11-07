@@ -1,0 +1,46 @@
+uuid: 38d9bb94-0596-4123-a15b-ebc06a8809bc
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+  theme:
+    - whitecross
+active_version: f6e7ea42af30a7b1
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        title:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Tab Title'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        background_color:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: default
+          expression: ℹ︎list_string␟value
+          derived_schema_metadata: {  }
+    fallback_metadata:
+      slot_definitions:
+        content:
+          title: 'Tab Content'
+label: 'Tab Item'
+id: sdc.whitecross.tab-item
+provider: whitecross
+source: sdc
+source_local_id: 'whitecross:tab-item'

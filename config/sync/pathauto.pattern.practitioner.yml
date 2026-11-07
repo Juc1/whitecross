@@ -1,0 +1,23 @@
+uuid: 2cddee3a-f207-41a0-9653-2089c690a15e
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.practitioner
+  module:
+    - node
+id: practitioner
+label: Practitioner
+type: 'canonical_entities:node'
+pattern: '/practitioners/[node:title]'
+selection_criteria:
+  51771500-ad56-45fb-98cd-884f006cac6b:
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      practitioner: practitioner
+selection_logic: and
+weight: -5
+relationships: {  }

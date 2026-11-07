@@ -1,0 +1,23 @@
+uuid: 5d819bf5-20d2-49b3-a0c0-c5898db53167
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:306f9340-59fc-4312-a37b-3d48e5ae447d'
+  module:
+    - block_content
+  theme:
+    - whitecross
+id: socialsvgul
+theme: whitecross
+region: content
+weight: 6
+provider: null
+plugin: 'block_content:306f9340-59fc-4312-a37b-3d48e5ae447d'
+settings:
+  id: 'block_content:306f9340-59fc-4312-a37b-3d48e5ae447d'
+  label: 'Social svg ul'
+  label_display: '0'
+  provider: block_content
+  view_mode: full
+visibility: {  }

@@ -1,0 +1,15 @@
+{% embed 'whitecross:background-gradient-changer'
+  with {
+    attributes: create_attribute().addClass('fixed bottom-0 left-0 w-full z-50'),
+    gradient1: 'linear-gradient(to right, var(--radley-blue, #0072af), var(--radley-blue, #0072af))',
+    gradient2: 'linear-gradient(to right, var(--radley-purple, #7865bb), var(--radley-purple, #7865bb))',
+    gradient3: 'linear-gradient(to right, var(--radley-red, #c04147), var(--radley-red, #c04147))'
+  }
+%}
+  {% block children %}
+    <div class="text-center">
+      07989 590181 <br> <a class="text-white" href="mailto:info@andrewradley.com">info@andrewradley.com</a><br />London, SE1 | Marlborough SN8 | Devizes SN10
+    </div>
+  {% endblock %}
+{% endembed %}
+

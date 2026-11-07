@@ -1,0 +1,23 @@
+uuid: 034ba6ab-4eb0-47e2-b8fb-75460d15ef25
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.block.block_content.306f9340-59fc-4312-a37b-3d48e5ae447d
+    - canvas.component.block.block_content.38f5c089-4938-439e-a4d9-6c9d1940e3f5
+    - canvas.component.block.block_content.55a7ce51-1f5e-4ad9-8151-62d1d17ce9ab
+    - canvas.component.block.block_content.6af7a026-e18a-4e0b-b9f8-bf86003a4926
+    - canvas.component.block.block_content.72598a8e-a858-4991-a7e9-2ea41ebec3c1
+    - canvas.component.block.block_content.c1f01f6b-ddd2-494a-b233-ca54434fac68
+    - canvas.component.block.block_content.f935cae2-e9b3-4421-8902-421a9f6887aa
+name: 'Content block'
+configEntityTypeId: component
+weight: 0
+items:
+  - block.block_content.306f9340-59fc-4312-a37b-3d48e5ae447d
+  - block.block_content.38f5c089-4938-439e-a4d9-6c9d1940e3f5
+  - block.block_content.55a7ce51-1f5e-4ad9-8151-62d1d17ce9ab
+  - block.block_content.6af7a026-e18a-4e0b-b9f8-bf86003a4926
+  - block.block_content.72598a8e-a858-4991-a7e9-2ea41ebec3c1
+  - block.block_content.c1f01f6b-ddd2-494a-b233-ca54434fac68
+  - block.block_content.f935cae2-e9b3-4421-8902-421a9f6887aa

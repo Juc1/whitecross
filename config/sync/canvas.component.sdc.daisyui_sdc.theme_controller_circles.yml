@@ -1,0 +1,18 @@
+uuid: bfcc1063-0027-4403-82ba-06923371cb4a
+langcode: en
+status: true
+dependencies:
+  module:
+    - daisyui_sdc
+active_version: 8fe3be948e0194e1
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions: {  }
+    fallback_metadata:
+      slot_definitions: {  }
+label: 'Theme Controller Circles'
+id: sdc.daisyui_sdc.theme_controller_circles
+provider: daisyui_sdc
+source: sdc
+source_local_id: 'daisyui_sdc:theme_controller_circles'

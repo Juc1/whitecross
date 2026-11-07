@@ -1,0 +1,21 @@
+uuid: 4b39f52e-9379-4dd7-b97b-f1519c470d4b
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - type_tray
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main-menu
+    parent: 'main-menu:0:'
+  type_tray:
+    existing_nodes_link_text: 'View existing <em class="placeholder">Newsletter</em> content'
+name: Newsletter
+type: newsletter
+description: 'Mailchimp newsletter'
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: false

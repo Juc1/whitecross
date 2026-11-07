@@ -1,0 +1,29 @@
+uuid: aae09f2c-6f89-4737-898e-bc885b712078
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_practitionertax
+    - node.type.testimonial
+    - taxonomy.vocabulary.practitioner
+id: node.testimonial.field_practitionertax
+field_name: field_practitionertax
+entity_type: node
+bundle: testimonial
+label: Practitioner
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      practitioner: practitioner
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

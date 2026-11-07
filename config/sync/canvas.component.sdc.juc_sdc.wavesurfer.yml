@@ -1,0 +1,46 @@
+uuid: a7d8822d-83f5-4b99-8eb7-ecdb6ed0935f
+langcode: en
+status: true
+dependencies:
+  module:
+    - juc_sdc
+    - link
+active_version: 1a8b1c6c3fc9641e
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        src:
+          required: true
+          field_type: link
+          field_storage_settings: {  }
+          field_instance_settings:
+            title: 0
+            link_type: 17
+          field_widget: link_default
+          default_value:
+            -
+              uri: 'https://example.com/audio.mp3'
+              options: {  }
+          expression: ℹ︎link␟url
+          derived_schema_metadata:
+            string_shape:
+              format: uri-reference
+        downloadable:
+          required: false
+          field_type: boolean
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: boolean_checkbox
+          default_value:
+            -
+              value: true
+          expression: ℹ︎boolean␟value
+          derived_schema_metadata: {  }
+    fallback_metadata:
+      slot_definitions: {  }
+label: 'WaveSurfer Audio Player'
+id: sdc.juc_sdc.wavesurfer
+provider: juc_sdc
+source: sdc
+source_local_id: 'juc_sdc:wavesurfer'
