@@ -1,11 +1,10 @@
-uuid: 7ba8c878-c896-4161-a23e-79a73627eae6
+uuid: 773e1104-58da-4cc8-8e33-b6c25652e951
 langcode: en
 status: true
 dependencies:
   module:
+    - juc_sdc
     - options
-  theme:
-    - whitecross
 active_version: 69bfd7d07d942429
 versioned_properties:
   active:
@@ -86,7 +85,7 @@ versioned_properties:
     fallback_metadata:
       slot_definitions: {  }
 label: 'Icon Text'
-id: sdc.whitecross.icon-text
-provider: whitecross
+id: sdc.juc_sdc.icon-text
+provider: juc_sdc
 source: sdc
-source_local_id: 'whitecross:icon-text'
+source_local_id: 'juc_sdc:icon-text'

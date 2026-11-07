@@ -7,6 +7,7 @@ dependencies:
     - canvas.component.sdc.juc_sdc.grid
     - canvas.component.sdc.juc_sdc.group
     - canvas.component.sdc.juc_sdc.icon
+    - canvas.component.sdc.juc_sdc.icon-text
     - canvas.component.sdc.juc_sdc.section
     - canvas.component.sdc.juc_sdc.wavesurfer
     - canvas.component.sdc.whitecross.accordion
@@ -27,6 +28,7 @@ items:
   - sdc.juc_sdc.grid
   - sdc.juc_sdc.group
   - sdc.juc_sdc.icon
+  - sdc.juc_sdc.icon-text
   - sdc.juc_sdc.section
   - sdc.juc_sdc.wavesurfer
   - sdc.whitecross.accordion
