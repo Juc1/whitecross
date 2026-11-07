@@ -20,7 +20,7 @@ component_tree:
   '0:1863eed1-2197-4316-a96b-73b06a5c46f1':
     uuid: 1863eed1-2197-4316-a96b-73b06a5c46f1
     component_id: sdc.daisyui_sdc.daisy-card-teaser
-    component_version: ed0b33e22ec23c1c
+    component_version: c8eb3bbd4edd042b
     inputs:
       heading_text:
         sourceType: entity-field
@@ -36,6 +36,8 @@ component_tree:
       is_text_centered: false
       orientation: vertical
       style: border
+      border_width: '1'
+      border_color: base-300
       size: md
       background: base-200
       shadow: xl
